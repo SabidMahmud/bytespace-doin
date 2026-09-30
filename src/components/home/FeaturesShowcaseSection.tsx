@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { CourseCard } from "@/components/CourseCard";
+import { StudentFeatureVisual } from "@/components/StudentFeatureVisual";
+import { InstructorFeatureVisual } from "@/components/InstructorFeatureVisual";
 
 export const FeaturesShowcaseSection = () => {
   return (
@@ -67,57 +68,8 @@ export const FeaturesShowcaseSection = () => {
       
                     {/* Right Feature Visual (Frame 11 [34:1155] -> w: 621px, h: 552px) */}
                     <div className="w-full lg:w-[621px] flex justify-center shrink-0 overflow-visible">
-                      <div className="relative w-[621px] h-[552px] shrink-0 transform scale-[0.52] sm:scale-75 md:scale-90 lg:scale-100 origin-top -mb-[260px] sm:-mb-[130px] md:-mb-[55px] lg:mb-0">
-                        {/* Layer 1: Course Card 1 [34:1055] */}
-                        <div className="absolute left-0 top-0 z-20">
-                          <CourseCard
-                            title="Learn Figma from Basic"
-                            author="by purepearl studio"
-                            level="Beginner"
-                            image="/courses/course-3.png"
-                            price="$25"
-                            period="/lifetime"
-                            rating="4.5"
-                            badges={["17 Lessons", "2 hours 16 mins", "59 Comments"]}
-                          />
-                        </div>
-      
-                        {/* Layer 2: 3D Lime Coil [34:981] */}
-                        <div className="absolute left-[406px] top-[67px] w-[215px] h-[215px] z-60 pointer-events-none">
-                          <Image
-                            src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/784440af-fe60-4c79-b540-bad66b296e50"
-                            alt="Electric lime coil"
-                            width={215}
-                            height={215}
-                            className="w-full h-full object-contain"
-                            unoptimized
-                          />
-                        </div>
-      
-                        {/* Layer 3: 3D Student with Laptop [34:971] */}
-                        <div className="absolute left-0 top-[12px] w-[577px] h-[540px] z-30 pointer-events-none">
-                          <Image
-                            src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/72c4485e-0db4-41d9-94ba-5bd0652290fc"
-                            alt="Student with laptop"
-                            width={673}
-                            height={642}
-                            className="absolute -left-[76px] -top-[35px] max-w-none"
-                            priority
-                            unoptimized
-                          />
-                        </div>
-      
-                        {/* Layer 4: Learning Progress Card [34:1031] */}
-                        <div className="absolute left-[345px] top-[213px] w-[232px] h-[138px] z-40 bg-white rounded-2xl shadow-xl p-4 flex flex-col justify-between border border-white/80">
-                          <p className="font-sans font-medium text-[16px] leading-6 text-[#242528]">Learning Progress</p>
-                          <p className="font-heading font-semibold text-[48px] leading-[57.6px] tracking-tight text-[#242528]">55%</p>
-                          <div className="w-[200px] h-2 bg-[#F5F5F6] rounded-full overflow-hidden">
-                            <div className="w-[112px] h-full bg-[#D4FB20] rounded-full" />
-                          </div>
-                        </div>
-                      </div>
+                      <StudentFeatureVisual />
                     </div>
-      
                   </div>
       
                   {/* Block 2 (Frame 14 [34:1158] -> w: 1200px, h: 596px, gap: 79px) */}
@@ -125,90 +77,10 @@ export const FeaturesShowcaseSection = () => {
       
                     {/* Left Dashboard Visual (Frame 12 [34:1156] -> w: 541px, h: 596px) */}
                     <div className="w-full lg:w-[541px] flex justify-center shrink-0 overflow-visible">
-                      <div className="relative w-[541px] h-[596px] shrink-0 transform scale-[0.56] sm:scale-75 md:scale-90 lg:scale-100 origin-top -mb-[260px] sm:-mb-[140px] md:-mb-[60px] lg:mb-0">
-                        {/* Layer 1: Total Revenue Card [34:987] */}
-                        <div className="absolute left-0 top-[44px] w-[232px] h-[119px] z-20 bg-[#003BE2] rounded-2xl shadow-lg p-4 flex flex-col justify-between text-white">
-                          <div>
-                            <p className="font-sans font-medium text-[16px] leading-[19.2px]">Total Revenue</p>
-                            <p className="font-sans text-[10px] text-white/80">July 1-28</p>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="font-heading font-semibold text-[24px] leading-8 text-white">$120.29</span>
-                            <span className="bg-[#D4FB20] text-[#242528] font-sans font-medium text-[10px] px-2 py-0.5 rounded-full">+12$</span>
-                          </div>
-                          <div className="w-full h-2 bg-white/20 rounded-full overflow-hidden">
-                            <div className="w-[112px] h-full bg-[#D4FB20] rounded-full" />
-                          </div>
-                        </div>
-      
-                        {/* Layer 1: Year to Date Card [34:998] */}
-                        <div className="absolute left-0 top-[194px] w-[134px] h-[135px] z-20 bg-[#003BE2] rounded-2xl shadow-lg p-4 flex flex-col justify-between text-white">
-                          <div>
-                            <p className="font-sans font-medium text-[16px] leading-[19.2px]">Year to Date</p>
-                            <p className="font-sans text-[10px] text-white/80">2023</p>
-                          </div>
-                          <span className="font-heading font-semibold text-[24px] leading-8 text-white">$1,200.38</span>
-                          <div>
-                            <span className="inline-block bg-[#D4FB20] text-[#242528] font-sans font-medium text-[10px] px-2 py-0.5 rounded-full">+12$</span>
-                          </div>
-                        </div>
-      
-                        {/* Layer 2: 3D Lime Coil [34:1006] */}
-                        <div className="absolute left-[305px] top-[114px] w-[215px] h-[215px] z-50 pointer-events-none">
-                          <Image
-                            src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f7a34751-401c-4dda-a343-542834509895"
-                            alt="Electric lime coil"
-                            width={215}
-                            height={215}
-                            className="w-full h-full object-contain"
-                            priority
-                            unoptimized
-                          />
-                        </div>
-      
-                        {/* Layer 3: 3D Female Instructor with Tablet [34:1011] */}
-                        <div className="absolute left-[28px] top-0 w-[435px] h-[596px] z-30 pointer-events-none">
-                          <Image
-                            src="/images/cutouts/instructor-female.png"
-                            alt="Instructor with tablet"
-                            width={507}
-                            height={629}
-                            className="absolute -left-[45px] -top-[31px] max-w-none"
-                            unoptimized
-                            priority
-                          />
-                        </div>
-      
-                        {/* Layer 4: Happy Students Card [34:1038] */}
-                        <div className="absolute left-[283px] top-[413px] w-[258px] h-[123px] z-30 bg-white rounded-2xl shadow-xl p-4 flex flex-col justify-between border border-white/80">
-                          <div>
-                            <p className="font-sans font-medium text-[16px] leading-[19.2px] text-[#242528] mb-1">Happy Students</p>
-                            <div className="flex items-center gap-1.5 mb-2">
-                              <span className="font-sans text-[10px] text-[#242528] font-normal">4.5 (240)</span>
-                              <span className="text-[#D4FB20] text-sm">★</span>
-                            </div>
-                          </div>
-                          <div className="flex items-center -space-x-4">
-                            {[
-                              "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/22e03c4a-2b06-457e-a859-3ca9a95c513e",
-                              "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9835594f-25d2-450e-8f98-417543c662b5",
-                              "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4915496f-047a-474f-9ce4-2200a099135e",
-                              "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f5583e32-ab2a-4730-a1f7-adfe25065c20",
-                              "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f3e65acd-f6ed-4f37-9743-ea3975a4d92a",
-                              "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0c44f8ff-a0ac-4092-8e3d-2d65e0b67e6d",
-                              "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e5496d55-478a-4736-bc16-e4652263d210",
-                            ].map((avatarUrl, i) => (
-                              <Image key={i} src={avatarUrl} alt="" width={43} height={43} className="w-[43px] h-[43px] rounded-full border-0 border-white object-cover" unoptimized />
-                            ))}
-                            <div className="w-[43px] h-[43px] rounded-full bg-[#D4FB20] border-0 border-white flex items-center justify-center text-[12px] font-bold text-[#242528] z-10 shrink-0">
-                              2K+
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <InstructorFeatureVisual />
                     </div>
-      
-                    {/* Right Text (Text [34:897] -> w: 580px, h: 388px) */}
+
+                                        {/* Right Text (Text [34:897] -> w: 580px, h: 388px) */}
                     <div className="w-full lg:w-[580px] shrink-0 text-left">
                       {/* Title [34:900] -> Poppins 600, 44px / 52.8px, -0.44px letter spacing, #242528 */}
                       <h2 className="font-heading font-semibold text-3xl sm:text-4xl lg:text-[44px] lg:leading-[52.8px] text-[#242528] tracking-[-0.44px] mb-[40px] max-w-[391px]">
