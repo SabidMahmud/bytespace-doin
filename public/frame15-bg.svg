@@ -1,0 +1,50 @@
+<svg width="100%" height="100%" viewBox="0 0 1440 1460" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="100%" height="100%" fill="#FAFAFA"/>
+<g filter="url(#blur40)">
+  <!-- Ellipse 11: Lime top-left -->
+  <circle cx="416.5" cy="102.5" r="568.5" fill="url(#grad_lime_11)" fill-opacity="0.40"/>
+  <!-- Ellipse 10: Blue top-right -->
+  <circle cx="1379.5" cy="110.5" r="568.5" fill="url(#grad_blue_10)" fill-opacity="0.08"/>
+  <!-- Ellipse 9: Blue middle-left -->
+  <circle cx="60.5" cy="751.5" r="568.5" fill="url(#grad_blue_9)" fill-opacity="0.16"/>
+  <!-- Ellipse 8: Blue bottom-right -->
+  <circle cx="1290.5" cy="1356.5" r="568.5" fill="url(#grad_blue_8)" fill-opacity="0.24"/>
+  <!-- Ellipse 12: Lime bottom-left -->
+  <circle cx="49" cy="1282" r="336" fill="url(#grad_lime_12)" fill-opacity="0.60"/>
+</g>
+<defs>
+  <filter id="blur40" x="-600" y="-600" width="2640" height="2660" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feGaussianBlur stdDeviation="40"/>
+  </filter>
+  <radialGradient id="grad_lime_11" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(416.5 102.5) rotate(90) scale(568.5)">
+    <stop offset="0%" stop-color="#CBFC01" stop-opacity="1"/>
+    <stop offset="53%" stop-color="#CBFC01" stop-opacity="0.23"/>
+    <stop offset="75%" stop-color="#CBFC01" stop-opacity="0.06"/>
+    <stop offset="100%" stop-color="#CBFC01" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="grad_blue_10" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1379.5 110.5) rotate(90) scale(568.5)">
+    <stop offset="0%" stop-color="#003BE2" stop-opacity="1"/>
+    <stop offset="53%" stop-color="#003BE2" stop-opacity="0.23"/>
+    <stop offset="75%" stop-color="#003BE2" stop-opacity="0.06"/>
+    <stop offset="100%" stop-color="#003BE2" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="grad_blue_9" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(60.5 751.5) rotate(90) scale(568.5)">
+    <stop offset="0%" stop-color="#003BE2" stop-opacity="1"/>
+    <stop offset="53%" stop-color="#003BE2" stop-opacity="0.23"/>
+    <stop offset="75%" stop-color="#003BE2" stop-opacity="0.06"/>
+    <stop offset="100%" stop-color="#003BE2" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="grad_blue_8" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1290.5 1356.5) rotate(90) scale(568.5)">
+    <stop offset="0%" stop-color="#003BE2" stop-opacity="1"/>
+    <stop offset="53%" stop-color="#003BE2" stop-opacity="0.23"/>
+    <stop offset="75%" stop-color="#003BE2" stop-opacity="0.06"/>
+    <stop offset="100%" stop-color="#003BE2" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="grad_lime_12" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(49 1282) rotate(90) scale(336)">
+    <stop offset="0%" stop-color="#CBFC01" stop-opacity="1"/>
+    <stop offset="53%" stop-color="#CBFC01" stop-opacity="0.23"/>
+    <stop offset="75%" stop-color="#CBFC01" stop-opacity="0.06"/>
+    <stop offset="100%" stop-color="#CBFC01" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+</svg>
