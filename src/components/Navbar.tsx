@@ -1,0 +1,58 @@
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+
+export const Navbar = () => {
+  return (
+    <header className="w-full bg-transparent absolute top-0 z-50 flex justify-center">
+      <div className="w-full max-w-[1440px] px-6 lg:px-[120px]">
+        <div className="flex justify-between items-center h-[120px] relative">
+          
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center">
+              <Image 
+                src="/logo.svg" 
+                alt="ByteSpace Logo" 
+                width={171} 
+                height={37} 
+                className="h-[37px] w-[171px] object-contain" 
+                priority 
+                unoptimized
+              />
+            </Link>
+          </div>
+          
+          {/* Center Nav */}
+          <nav className="hidden md:flex items-start gap-6 absolute left-1/2 transform -translate-x-1/2 top-[47px]">
+            <Link href="#" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-medium text-[16px] leading-[19.2px] transition-colors">
+              Home
+            </Link>
+            <Link href="#" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[16px] leading-[25.6px] transition-colors">
+              Courses
+            </Link>
+            <Link href="#" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[16px] leading-[25.6px] transition-colors">
+              Creators
+            </Link>
+          </nav>
+
+          {/* Right Nav */}
+          <div className="hidden md:flex items-center gap-6">
+            <Link href="/login" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[16px] leading-[24px] transition-colors">
+              Sign In
+            </Link>
+            <Link href="/signup" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[16px] leading-[24px] transition-colors">
+              Join Us
+            </Link>
+            <button className="text-[#F5F5F6] hover:text-[#D4FB20] transition-colors flex items-center justify-center w-6 h-6" aria-label="Shopping Bag">
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z" />
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </header>
+  );
+};
