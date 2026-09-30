@@ -1,30 +1,35 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export const Navbar = () => {
+  
+
   return (
-    <header className="w-full bg-transparent absolute top-0 z-50 flex justify-center">
-      <div className="w-full max-w-[1440px] px-6 lg:px-[120px]">
-        <div className="flex justify-between items-center h-[120px] relative">
+    <header className="w-full bg-transparent absolute top-0 left-0 z-[100] flex justify-center pointer-events-auto ">
+      <div className="w-full max-w-[1440px] px-6 xl:px-[120px]">
+        {/* Increased mobile height to ensure it clears the notch/status bar */}
+        <div className="flex justify-between items-center h-[80px] lg:h-[120px] relative">
           
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center z-50">
             <Link href="/" className="flex items-center">
               <Image 
                 src="/logo.svg" 
                 alt="ByteSpace Logo" 
                 width={171} 
                 height={37} 
-                className="h-[37px] w-[171px] object-contain" 
+                className="h-[28px] w-auto lg:h-[37px] object-contain" 
                 priority 
                 unoptimized
               />
             </Link>
           </div>
           
-          {/* Center Nav */}
-          <nav className="hidden md:flex items-start gap-6 absolute left-1/2 transform -translate-x-1/2 top-[47px]">
+          {/* Center Nav - Desktop Only */}
+          <nav className="hidden lg:flex items-start gap-6 absolute left-1/2 transform -translate-x-1/2 top-[47px]">
             <Link href="#" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-medium text-[16px] leading-[19.2px] transition-colors">
               Home
             </Link>
@@ -36,23 +41,62 @@ export const Navbar = () => {
             </Link>
           </nav>
 
-          {/* Right Nav */}
-          <div className="hidden md:flex items-center gap-6">
+          {/* Right Nav - Desktop Only */}
+          <div className="hidden lg:flex items-center gap-6 z-50">
             <Link href="/login" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[16px] leading-[24px] transition-colors">
               Sign In
             </Link>
             <Link href="/signup" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[16px] leading-[24px] transition-colors">
               Join Us
             </Link>
-            <button className="text-[#F5F5F6] hover:text-[#D4FB20] transition-colors flex items-center justify-center w-6 h-6" aria-label="Shopping Bag">
+            <button type="button" className="text-[#F5F5F6] hover:text-[#D4FB20] transition-colors flex items-center justify-center w-6 h-6" aria-label="Shopping Bag">
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z" />
               </svg>
             </button>
           </div>
 
+          {/* Pure CSS Mobile Hamburger (No JS Required) */}
+          <input type="checkbox" id="mobile-menu-toggle" className="hidden peer" />
+          <label 
+            htmlFor="mobile-menu-toggle"
+            className="lg:hidden text-[#F5F5F6] p-4 -mr-2 z-[99999] relative cursor-pointer pointer-events-auto touch-manipulation transition-colors select-none"
+            aria-label="Toggle Mobile Menu"
+          >
+            {/* Hamburger Icon */}
+            <svg className="w-8 h-8 peer-checked:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            {/* Close Icon (Visible when checked) */}
+            <svg className="w-8 h-8 hidden peer-checked:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </label>
+          
+          {/* Mobile Menu Overlay (Controlled via Peer Checked) */}
+          <div className="absolute top-[80px] left-0 w-full bg-[var(--color-persian-blue-800)] border-b border-white/10 flex-col items-center py-8 gap-6 shadow-2xl z-40 hidden peer-checked:flex lg:peer-checked:hidden">
+            <Link href="#" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-medium text-[20px] transition-colors">
+              Home
+            </Link>
+            <Link href="#" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[20px] transition-colors">
+              Courses
+            </Link>
+            <Link href="#" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[20px] transition-colors">
+              Creators
+            </Link>
+            
+            <div className="w-[100px] h-px bg-white/20 my-2"></div>
+            
+            <Link href="/login" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[20px] transition-colors">
+              Sign In
+            </Link>
+            <Link href="/signup" className="text-[#D4FB20] hover:text-[#CBFC01] font-sans font-medium text-[20px] transition-colors">
+              Join Us
+            </Link>
+          </div>
         </div>
       </div>
     </header>
   );
 };
+

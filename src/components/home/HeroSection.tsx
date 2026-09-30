@@ -4,7 +4,7 @@ import Image from "next/image";
 export const HeroSection = () => {
   return (
     <>
-      <section className="relative overflow-hidden bg-[var(--color-persian-blue-800)] w-full flex justify-center h-[1024px]">
+      <section className="relative overflow-hidden bg-[var(--color-persian-blue-800)] w-full flex flex-col xl:justify-center min-h-[100vh] xl:min-h-[1024px] xl:h-[1024px]">
                 {/* Exact 2px Stroke Grid Background from Figma [Group 4: 12:224] - Full Screen Width */}
                 <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden">
                   <Image
@@ -29,8 +29,8 @@ export const HeroSection = () => {
                   <Image src="/shape-lime-cylinder.png" alt="" fill sizes="164px" className="object-contain" priority unoptimized />
                 </div>
       
-                {/* 1440x1024 Exact Figma Artboard Stage */}
-                <div className="relative w-[1440px] h-[1024px] shrink-0 opacity-100">
+                {/* ── Desktop Version (Exact 1440x1024 Figma Artboard Stage) ── */}
+                <div className="hidden xl:block relative w-[1440px] h-[1024px] shrink-0 opacity-100 mx-auto">
       
                   {/* ── Giant Lime Circle [1:1866] -> x: 145, y: 582, w: 1149, h: 1149, stroke: 320px inside ── */}
                   <div className="absolute left-[145px] top-[582px] w-[1149px] h-[1149px] rounded-full border-[320px] border-[#D4FB20] bg-transparent z-0 pointer-events-none box-border" />
@@ -219,7 +219,80 @@ export const HeroSection = () => {
                   </div>
       
                 </div>
+
+                {/* ── Mobile & Tablet Version (Flexbox Layout) ── */}
+                <div className="xl:hidden relative w-full flex flex-col items-center pt-24 pb-16 px-4 md:px-8 z-10 flex-1">
+                  
+                  {/* Headline */}
+                  <div className="w-full max-w-3xl text-center mb-6">
+                    <h1 className="font-heading font-semibold text-[38px] sm:text-[48px] md:text-[56px] leading-[1.2] text-white tracking-[-0.72px]">
+                      Get Access to Hundreds<br />Courses Available
+                    </h1>
+                  </div>
+
+                  {/* Subtitle */}
+                  <div className="w-full max-w-2xl text-center mb-8">
+                    <p className="font-sans text-[15px] sm:text-[17px] leading-[1.6] text-[#E5E6E8] font-normal">
+                      Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
+                    </p>
+                  </div>
+
+                  {/* Search Bar */}
+                  <div className="w-full max-w-lg mb-10 flex flex-col sm:flex-row gap-3 sm:gap-4 items-center">
+                    <div className="w-full h-[52px] bg-white rounded-full px-6 flex items-center shadow-lg shrink-0">
+                      <svg className="w-5 h-5 text-[#82868E] mr-3 shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                      <input
+                        type="text"
+                        placeholder="Course, topic, creator"
+                        className="w-full bg-transparent outline-none text-[#242528] font-sans placeholder-[#82868E] text-[16px] md:text-[18px] font-normal"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      className="w-full sm:w-[104px] h-[52px] bg-[#D4FB20] hover:bg-[#CBFC01] text-[#242528] font-sans font-medium text-[16px] md:text-[18px] rounded-full shadow-lg flex items-center justify-center transition-colors shrink-0"
+                    >
+                      Search
+                    </button>
+                  </div>
+
+                  {/* Student Visual with Proportional Lime Arch & Clean Badges */}
+                  <div className="relative w-[300px] sm:w-[380px] aspect-[578/541] mt-4 flex items-center justify-center">
+                    
+                    {/* Exact Proportional Figma Lime Arch framing the student from behind */}
+                    <div className="absolute left-1/2 -translate-x-1/2 top-[16%] w-[310px] h-[310px] sm:w-[380px] sm:h-[380px] rounded-full border-[48px] sm:border-[60px] border-[#D4FB20] bg-transparent pointer-events-none -z-0 box-border" />
+
+                    {/* Student Image */}
+                    <Image
+                      src="https://s3-alpha-sig.figma.com/img/29a5/2a24/e51266edcd7d57d73392ee5fc4833220?Expires=1791763200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=X4IOYdzdq-qZLjHIfmGNt~KfAudV5EU1adxHH3mvv7mikMxzuIyO3TOc1EykRcuhlqsI8iuaqFKTbjHjgco1crfl-XyCeVJcsAfEVkuJpfflGQxfSWuVbsIC~yrp6kJ88ULsI4y6TXUDlt0bUNhyqBU5kiq6zPbJlltLpcPnN512joKwUZ5Im8bAm2U2yoMlGDf7JiXJ84oEXMSUbn769D4CFHPCvtDI-I7gaRXFgLcADSKzGU4Ylk-SXefbDP3xIhzsKHgs4ShPeVSQNxVX2wLgAJzZY9qNb~OHYIKN3ogFqCL9NpfNz1WjEl4qkT3ziYhutmuFQl711lTrIxAl~g__"
+                      alt="Student with laptop"
+                      fill
+                      sizes="(max-width: 640px) 300px, 380px"
+                      className="w-full h-full object-contain select-none relative z-10"
+                      priority
+                      unoptimized
+                    />
+                    
+                    {/* UI/UX Design Badge (Top-Left) */}
+                    <div className="absolute -left-2 sm:-left-6 top-[18%] bg-white rounded-xl sm:rounded-2xl shadow-lg z-20 px-2.5 py-1.5 sm:px-3.5 sm:py-2.5 text-left border border-white/80">
+                      <p className="font-sans font-medium text-[#242528] text-[11px] sm:text-[14px] leading-tight mb-0.5">UI/UX Design</p>
+                      <p className="text-[9px] sm:text-[11px] font-sans font-normal text-[#82868E] leading-tight">200 Courses &bull; 1000+ Students</p>
+                    </div>
+
+                    {/* Learning Progress Badge (Bottom-Right) */}
+                    <div className="absolute -right-2 sm:-right-6 bottom-[10%] bg-white rounded-xl sm:rounded-2xl shadow-lg z-20 px-3 py-2 sm:px-4 sm:py-3 text-left border border-white/80 w-[140px] sm:w-[190px]">
+                      <p className="text-[10px] sm:text-[12px] font-sans font-medium text-[#242528] mb-0.5">Learning Progress</p>
+                      <p className="text-[22px] sm:text-[32px] leading-tight font-heading font-semibold text-[#242528] mb-1 sm:mb-1.5 tracking-tight">55%</p>
+                      <div className="w-full h-1.5 bg-[#F5F5F6] rounded-full overflow-hidden">
+                        <div className="w-[55%] h-full bg-[#D4FB20] rounded-full" />
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
               </section>
+
     </>
   );
 };

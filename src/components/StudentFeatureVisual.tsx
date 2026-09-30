@@ -4,7 +4,7 @@ import { CourseCard } from "@/components/CourseCard";
 
 export const StudentFeatureVisual = () => {
   return (
-    <div className="relative w-[621px] h-[552px] shrink-0 z-10 transform scale-[0.52] sm:scale-75 md:scale-90 lg:scale-100 origin-top">
+    <div className="relative w-[621px] h-[552px] shrink-0 z-10 transform scale-[0.48] min-[360px]:scale-[0.52] sm:scale-75 md:scale-90 lg:scale-100 origin-top">
       {/* Layer 1: Course Card */}
       <div className="absolute left-0 top-0 z-20">
         <CourseCard

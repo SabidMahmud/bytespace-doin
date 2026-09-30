@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const InstructorFeatureVisual = () => {
   return (
-    <div className="relative w-[541px] h-[596px] shrink-0 transform scale-[0.56] sm:scale-75 md:scale-90 lg:scale-100 origin-top">
+    <div className="relative w-[541px] h-[596px] shrink-0 transform scale-[0.52] min-[360px]:scale-[0.56] sm:scale-75 md:scale-90 lg:scale-100 origin-top">
       {/* Layer 1: Total Revenue Card */}
       <div className="absolute left-0 top-[44px] w-[232px] h-[119px] z-20 bg-[#003BE2]/90 backdrop-blur-[10px] rounded-[16px] p-4 flex flex-col justify-between text-[#F5F5F6]">
         <div>
