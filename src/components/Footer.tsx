@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/Button";
 
 export const Footer = () => {
   return (
@@ -34,12 +35,14 @@ export const Footer = () => {
                   placeholder="Enter your email" 
                   className="w-full sm:w-[376px] h-[48px] sm:h-[52px] px-5 sm:px-6 border border-[#CECFD3] rounded-full font-sans text-[15px] sm:text-[16px] text-[#242528] outline-none placeholder-[#82868E] focus:border-[#003BE2] transition-colors"
                 />
-                <button 
+                <Button 
                   type="button"
-                  className="w-full sm:w-[104px] h-[46px] sm:h-[48px] bg-[#D4FB20] hover:bg-[#CBFC01] text-[#242528] rounded-full font-sans font-medium text-[16px] sm:text-[18px] flex items-center justify-center transition-colors shrink-0 cursor-pointer"
+                  variant="lime"
+                  size="md"
+                  className="w-full sm:w-[104px] text-[16px] sm:text-[18px] shrink-0"
                 >
                   Search
-                </button>
+                </Button>
               </div>
               <p className="font-sans text-[11px] sm:text-[12px] leading-[1.6] text-[#4B4C53] max-w-md">
                 By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.

@@ -5,10 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const Navbar = () => {
-  
-
   return (
-    <header className="w-full bg-transparent absolute top-0 left-0 z-[100] flex justify-center pointer-events-auto ">
+    <header className="w-full bg-transparent absolute top-0 left-0 z-[100] flex justify-center pointer-events-auto">
       <div className="w-full max-w-[1440px] px-6 xl:px-[120px]">
         {/* Increased mobile height to ensure it clears the notch/status bar */}
         <div className="flex justify-between items-center h-[80px] lg:h-[120px] relative">
@@ -46,7 +44,7 @@ export const Navbar = () => {
             <Link href="/login" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[16px] leading-[24px] transition-colors">
               Sign In
             </Link>
-            <Link href="/signup" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[16px] leading-[24px] transition-colors">
+            <Link href="/register" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[16px] leading-[24px] transition-colors">
               Join Us
             </Link>
             <button type="button" className="text-[#F5F5F6] hover:text-[#D4FB20] transition-colors flex items-center justify-center w-6 h-6" aria-label="Shopping Bag">
@@ -59,7 +57,7 @@ export const Navbar = () => {
           {/* Pure CSS Mobile Hamburger (No JS Required) */}
           <input type="checkbox" id="mobile-menu-toggle" className="hidden peer" />
           <label 
-            htmlFor="mobile-menu-toggle"
+            htmlFor="mobile-menu-toggle" 
             className="lg:hidden text-[#F5F5F6] p-4 -mr-2 z-[99999] relative cursor-pointer pointer-events-auto touch-manipulation transition-colors select-none"
             aria-label="Toggle Mobile Menu"
           >
@@ -72,9 +70,9 @@ export const Navbar = () => {
                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </label>
-          
-          {/* Mobile Menu Overlay (Controlled via Peer Checked) */}
-          <div className="absolute top-[80px] left-0 w-full bg-[var(--color-persian-blue-800)] border-b border-white/10 flex-col items-center py-8 gap-6 shadow-2xl z-40 hidden peer-checked:flex lg:peer-checked:hidden">
+
+          {/* Full Screen Slide-down Menu Drawer */}
+          <div className="fixed inset-0 bg-[#003BE2] z-[9999] flex flex-col items-center justify-center gap-8 text-center opacity-0 pointer-events-none transition-all duration-300 peer-checked:opacity-100 peer-checked:pointer-events-auto">
             <Link href="#" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-medium text-[20px] transition-colors">
               Home
             </Link>
@@ -90,7 +88,7 @@ export const Navbar = () => {
             <Link href="/login" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[20px] transition-colors">
               Sign In
             </Link>
-            <Link href="/signup" className="text-[#D4FB20] hover:text-[#CBFC01] font-sans font-medium text-[20px] transition-colors">
+            <Link href="/register" className="text-[#D4FB20] hover:text-[#CBFC01] font-sans font-medium text-[20px] transition-colors">
               Join Us
             </Link>
           </div>
@@ -99,4 +97,3 @@ export const Navbar = () => {
     </header>
   );
 };
-
