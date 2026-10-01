@@ -1,19 +1,8 @@
 import React from "react";
 import Image from "next/image";
+import type { Course } from "@/types";
 
-export interface CourseCardProps {
-  title?: string;
-  author?: string;
-  level?: string;
-  image?: string;
-  price?: string;
-  period?: string;
-  rating?: string;
-  badges?: string[];
-  avatars?: string[];
-  count?: string;
-  countBadgeVariant?: "lime" | "dark";
-  priceColor?: string;
+export interface CourseCardProps extends Partial<Course> {
   className?: string;
 }
 

@@ -1,12 +1,12 @@
 import React from "react";
 import Image from "next/image";
+import type { Testimonial } from "@/types";
 
-export interface TestimonialCardProps {
+export interface TestimonialCardProps extends Partial<Testimonial> {
   name: string;
   role: string;
-  avatar?: string;
-  image?: string;
   quote: string;
+  image?: string;
   className?: string;
 }
 

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/Button";
+import { FOOTER_SECTIONS, FOOTER_LEGAL_LINKS } from "@/data";
 
 export const Footer = () => {
   return (
@@ -52,119 +53,35 @@ export const Footer = () => {
 
           {/* Right Columns */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-10 w-full lg:w-auto">
-            {/* Column 1: Browse */}
-            <div className="flex flex-col min-w-[130px]">
-              <h4 className="font-sans font-medium text-[16px] leading-[1.5] text-shuttle-gray-950 mb-4 sm:mb-6">
-                Browse
-              </h4>
-              <div className="flex flex-col gap-3 sm:gap-4">
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  Featured Courses
-                </Link>
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  Featured Categories
-                </Link>
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  Business
-                </Link>
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  IT
-                </Link>
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  Design
-                </Link>
+            {FOOTER_SECTIONS.map((section, idx) => (
+              <div
+                key={section.id}
+                className={`flex flex-col min-w-[130px] ${
+                  idx === 1
+                    ? "pt-0 sm:pt-[44px] lg:pt-[48px]"
+                    : idx === 2
+                    ? "col-span-2 sm:col-span-1"
+                    : ""
+                }`}
+              >
+                {section.title && (
+                  <h4 className="font-sans font-medium text-[16px] leading-[1.5] text-shuttle-gray-950 mb-4 sm:mb-6">
+                    {section.title}
+                  </h4>
+                )}
+                <div className="flex flex-col gap-3 sm:gap-4">
+                  {section.links.map((link) => (
+                    <Link
+                      key={link.id}
+                      href={link.href}
+                      className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            {/* Column 2: Empty Heading (aligns with items) */}
-            <div className="flex flex-col min-w-[130px] pt-0 sm:pt-[44px] lg:pt-[48px]">
-              <div className="flex flex-col gap-3 sm:gap-4">
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  Development
-                </Link>
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  Marketing
-                </Link>
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  Photography
-                </Link>
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  Finance
-                </Link>
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  Sport
-                </Link>
-              </div>
-            </div>
-
-            {/* Column 3: Platform */}
-            <div className="flex flex-col min-w-[130px] col-span-2 sm:col-span-1">
-              <h4 className="font-sans font-medium text-[16px] leading-[1.5] text-shuttle-gray-950 mb-4 sm:mb-6">
-                Platform
-              </h4>
-              <div className="flex flex-col gap-3 sm:gap-4">
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  Become a Creator
-                </Link>
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  Affiliate Program
-                </Link>
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  Contact
-                </Link>
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  Help
-                </Link>
-                <Link
-                  href="#"
-                  className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-                >
-                  About
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
@@ -175,24 +92,15 @@ export const Footer = () => {
             &copy; 2023 ByteSpace. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-end gap-5 sm:gap-6">
-            <Link
-              href="#"
-              className="font-sans text-[12px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="#"
-              className="font-sans text-[12px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              href="#"
-              className="font-sans text-[12px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
-            >
-              Cookies Settings
-            </Link>
+            {FOOTER_LEGAL_LINKS.map((link) => (
+              <Link
+                key={link.id}
+                href={link.href}
+                className="font-sans text-[12px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

@@ -1,14 +1,6 @@
 import React from "react";
 import { CategoryCard } from "@/components/cards/CategoryCard";
-
-const CATEGORIES = [
-  { name: "Design", icon: "/icons/category-design.svg" },
-  { name: "Development", icon: "/icons/category-development.svg" },
-  { name: "IT & Software", icon: "/icons/category-it-software.svg" },
-  { name: "Business", icon: "/icons/category-business.svg" },
-  { name: "Marketing", icon: "/icons/category-marketing.svg" },
-  { name: "Photography", icon: "/icons/category-photography.svg" },
-];
+import { LEARNING_PATH_CATEGORIES } from "@/data";
 
 export const LearningPathsSection = () => {
   return (
@@ -29,9 +21,9 @@ export const LearningPathsSection = () => {
 
         {/* 6 Category Cards Grid (Frame 10 [34:725] -> w: 1202px, h: 167px, gap: 40px) */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-[40px] justify-items-center w-full max-w-[1202px]">
-          {CATEGORIES.map((cat, idx) => (
+          {LEARNING_PATH_CATEGORIES.map((cat) => (
             <CategoryCard
-              key={idx}
+              key={cat.id}
               name={cat.name}
               icon={cat.icon}
             />
