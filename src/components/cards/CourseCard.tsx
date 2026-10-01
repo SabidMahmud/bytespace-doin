@@ -29,7 +29,7 @@ export const CourseCard = ({
   className = "",
 }: CourseCardProps) => {
   return (
-    <div className={`w-[373px] h-[384px] border-[1px] border-shuttle-gray-200 bg-white rounded-[24px] p-4 flex flex-col justify-between transition-all duration-200 hover:shadow-xl hover:-translate-y-1 group cursor-pointer shrink-0 ${className}`}>
+    <div className={`w-[373px] h-[384px] border border-shuttle-gray-200 bg-white rounded-[24px] p-4 flex flex-col justify-between transition-all duration-200 hover:shadow-xl hover:-translate-y-1 group cursor-pointer shrink-0 ${className}`}>
       
       {/* Thumbnail Frame (341px x 195px) */}
       <div className="relative w-[341px] h-[195px] rounded-[12px] overflow-hidden shrink-0">
@@ -47,7 +47,7 @@ export const CourseCard = ({
             {badges.map((b, idx) => (
               <span 
                 key={idx} 
-                className="bg-shuttle-gray-50/90 backdrop-blur-md text-black-700 text-[12px] font-sans font-medium px-3 py-[5px] rounded-full whitespace-nowrap shrink-0"
+                className="bg-shuttle-gray-50/90 backdrop-blur-md text-black-700 text-[12px] font-sans font-medium px-3 py-1.25 rounded-full whitespace-nowrap shrink-0"
               >
                 {b}
               </span>
@@ -57,7 +57,7 @@ export const CourseCard = ({
       </div>
 
       {/* Content Frame */}
-      <div className="flex flex-col flex-1 mt-[20px]">
+      <div className="flex flex-col flex-1 mt-5">
         {/* Title + Author and Rating */}
         <div className="flex items-start justify-between gap-2">
           <div className="flex flex-col flex-1 min-w-0 pr-2">
@@ -86,7 +86,7 @@ export const CourseCard = ({
         {/* Level Badge + Avatar Stack */}
         <div className="flex items-center gap-3 mt-4">
           {/* Beginner Badge */}
-          <div className="h-[32px] px-3 bg-shuttle-gray-50 rounded-full flex items-center gap-1 shrink-0">
+          <div className="h-8 px-3 bg-shuttle-gray-50 rounded-full flex items-center gap-1 shrink-0">
             <svg
               className="w-5 h-5 text-shuttle-gray-700"
               viewBox="0 0 24 24"
@@ -108,7 +108,7 @@ export const CourseCard = ({
                 alt=""
                 width={32}
                 height={32}
-                className="w-8 h-8 rounded-full border-[0px] border-white object-cover relative"
+                className="w-8 h-8 rounded-full border-0 border-white object-cover relative"
                 style={{ zIndex: i }}
                 unoptimized
               />
@@ -129,7 +129,7 @@ export const CourseCard = ({
         </div>
 
         {/* Price & Period */}
-        <div className="flex items-baseline gap-1 mt-[18px]">
+        <div className="flex items-baseline gap-1 mt-4.5">
           <span
             className={`font-heading font-semibold text-[20px] ${
               priceColor || "text-persian-blue-800"
