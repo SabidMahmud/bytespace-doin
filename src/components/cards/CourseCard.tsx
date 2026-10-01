@@ -119,7 +119,7 @@ export const CourseCard = ({
                 alt=""
                 width={32}
                 height={32}
-                className="w-8 h-8 rounded-full border-[1.5px] border-white object-cover relative"
+                className="w-8 h-8 rounded-full border-[0px] border-white object-cover relative"
                 style={{ zIndex: i }}
                 unoptimized
               />
