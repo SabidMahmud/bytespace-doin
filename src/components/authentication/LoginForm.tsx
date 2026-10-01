@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/Button";
+import { InputField } from "@/components/ui/InputField";
 
 export const LoginForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -42,53 +43,35 @@ export const LoginForm: React.FC = () => {
 
         {/* Form Fields */}
         <form onSubmit={handleSubmit} className="flex flex-col gap-[24px]">
-          {/* Email Field */}
-          <div className="flex flex-col gap-2">
-            <label
-              htmlFor="email"
-              className="font-sans font-medium text-[14px] leading-[16.8px] text-shuttle-gray-950"
-            >
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="designer@example.com"
-              className="w-full h-[52px] px-[24px] py-[12px] bg-white border border-shuttle-gray-100 rounded-[12px] font-sans font-normal text-[18px] leading-[28.8px] text-shuttle-gray-950 placeholder-shuttle-gray-400 focus:outline-none focus:border-persian-blue-800 focus:ring-2 focus:ring-persian-blue-800/20 transition-all"
-            />
-          </div>
+          <InputField
+            id="email"
+            name="email"
+            type="email"
+            label="Email"
+            required
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="designer@example.com"
+          />
 
-          {/* Password Field */}
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center justify-between">
-              <label
-                htmlFor="password"
-                className="font-sans font-medium text-[14px] leading-[16.8px] text-shuttle-gray-950"
-              >
-                Password
-              </label>
+          <InputField
+            id="password"
+            name="password"
+            type="password"
+            label="Password"
+            required
+            value={formData.password}
+            onChange={handleChange}
+            placeholder="••••••••"
+            labelRight={
               <Link
                 href="#"
                 className="font-sans text-[14px] text-persian-blue-800 hover:underline"
               >
                 Forgot password?
               </Link>
-            </div>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              required
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="••••••••"
-              className="w-full h-[52px] px-[24px] py-[12px] bg-white border border-shuttle-gray-100 rounded-[12px] font-sans font-normal text-[18px] leading-[28.8px] text-shuttle-gray-950 placeholder-shuttle-gray-400 focus:outline-none focus:border-persian-blue-800 focus:ring-2 focus:ring-persian-blue-800/20 transition-all"
-            />
-          </div>
+            }
+          />
 
           {/* Submit Button */}
           <div className="flex justify-end pt-2">

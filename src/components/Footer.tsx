@@ -29,21 +29,25 @@ export const Footer = () => {
             </p>
 
             <div className="flex flex-col gap-3 sm:gap-[14px]">
-              <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 w-full">
+              <form 
+                onSubmit={(e) => e.preventDefault()}
+                className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 w-full"
+              >
                 <input
                   type="email"
+                  required
                   placeholder="Enter your email"
                   className="w-full sm:w-[376px] h-[48px] sm:h-[52px] px-5 sm:px-6 border border-shuttle-gray-200 rounded-full font-sans text-[15px] sm:text-[16px] text-shuttle-gray-950 outline-none placeholder-shuttle-gray-400 focus:border-persian-blue-800 transition-colors"
                 />
                 <Button
-                  type="button"
+                  type="submit"
                   variant="lime"
                   size="md"
-                  className="w-full sm:w-[104px] text-[16px] sm:text-[18px] shrink-0"
+                  className="w-full sm:w-[130px] text-[16px] sm:text-[18px] shrink-0"
                 >
-                  Search
+                  Subscribe
                 </Button>
-              </div>
+              </form>
               <p className="font-sans text-[11px] sm:text-[12px] leading-[1.6] text-shuttle-gray-700 max-w-md">
                 By subscribing, you agree to our Privacy Policy and consent to
                 receive updates from our company.

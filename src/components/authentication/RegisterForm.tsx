@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/Button";
+import { InputField } from "@/components/ui/InputField";
 
 export const RegisterForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -44,65 +45,38 @@ export const RegisterForm: React.FC = () => {
 
         {/* Form Fields */}
         <form onSubmit={handleSubmit} className="flex flex-col gap-[24px]">
-          {/* Full Name Field */}
-          <div className="flex flex-col gap-2">
-            <label
-              htmlFor="fullName"
-              className="font-sans font-medium text-[14px] leading-[16.8px] text-shuttle-gray-950"
-            >
-              Full Name
-            </label>
-            <input
-              id="fullName"
-              name="fullName"
-              type="text"
-              required
-              value={formData.fullName}
-              onChange={handleChange}
-              placeholder="Jamie Davis"
-              className="w-full h-[52px] px-[24px] py-[12px] bg-white border border-shuttle-gray-100 rounded-[12px] font-sans font-normal text-[18px] leading-[28.8px] text-shuttle-gray-950 placeholder-shuttle-gray-400 focus:outline-none focus:border-persian-blue-800 focus:ring-2 focus:ring-persian-blue-800/20 transition-all"
-            />
-          </div>
+          <InputField
+            id="fullName"
+            name="fullName"
+            type="text"
+            label="Full Name"
+            required
+            value={formData.fullName}
+            onChange={handleChange}
+            placeholder="Jamie Davis"
+          />
 
-          {/* Email Field */}
-          <div className="flex flex-col gap-2">
-            <label
-              htmlFor="email"
-              className="font-sans font-medium text-[14px] leading-[16.8px] text-shuttle-gray-950"
-            >
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="designer@example.com"
-              className="w-full h-[52px] px-[24px] py-[12px] bg-white border border-shuttle-gray-100 rounded-[12px] font-sans font-normal text-[18px] leading-[28.8px] text-shuttle-gray-950 placeholder-shuttle-gray-400 focus:outline-none focus:border-persian-blue-800 focus:ring-2 focus:ring-persian-blue-800/20 transition-all"
-            />
-          </div>
+          <InputField
+            id="email"
+            name="email"
+            type="email"
+            label="Email"
+            required
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="designer@example.com"
+          />
 
-          {/* Password Field */}
-          <div className="flex flex-col gap-2">
-            <label
-              htmlFor="password"
-              className="font-sans font-medium text-[14px] leading-[16.8px] text-shuttle-gray-950"
-            >
-              Password
-            </label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              required
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="••••••••"
-              className="w-full h-[52px] px-[24px] py-[12px] bg-white border border-shuttle-gray-100 rounded-[12px] font-sans font-normal text-[18px] leading-[28.8px] text-shuttle-gray-950 placeholder-shuttle-gray-400 focus:outline-none focus:border-persian-blue-800 focus:ring-2 focus:ring-persian-blue-800/20 transition-all"
-            />
-          </div>
+          <InputField
+            id="password"
+            name="password"
+            type="password"
+            label="Password"
+            required
+            value={formData.password}
+            onChange={handleChange}
+            placeholder="••••••••"
+          />
 
           {/* Continue Submit Button */}
           <div className="flex justify-end pt-2">
