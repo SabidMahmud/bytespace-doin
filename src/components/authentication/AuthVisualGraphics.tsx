@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { CourseCard } from "@/components/CourseCard";
-import { HappyStudentsCard } from "@/components/HappyStudentsCard";
+import { CourseCard } from "@/components/cards/CourseCard";
+import { HappyStudentsCard } from "@/components/cards/HappyStudentsCard";
 
 export const RegisterVisualGraphics: React.FC<{ className?: string }> = ({
   className = "",

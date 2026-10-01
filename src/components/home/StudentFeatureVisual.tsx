@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { CourseCard } from "@/components/CourseCard";
-import { LearningProgressCard } from "@/components/LearningProgressCard";
+import { CourseCard } from "@/components/cards/CourseCard";
+import { LearningProgressCard } from "@/components/cards/LearningProgressCard";
 
 export const StudentFeatureVisual = () => {
   return (

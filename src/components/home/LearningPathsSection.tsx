@@ -1,5 +1,5 @@
 import React from "react";
-import { CategoryCard } from "@/components/CategoryCard";
+import { CategoryCard } from "@/components/cards/CategoryCard";
 
 const CATEGORIES = [
   { name: "Design", icon: "/icons/category-design.svg" },

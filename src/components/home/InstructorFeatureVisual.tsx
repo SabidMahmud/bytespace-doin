@@ -1,24 +1,13 @@
 import React from "react";
 import Image from "next/image";
-import { HappyStudentsCard } from "@/components/HappyStudentsCard";
+import { HappyStudentsCard } from "@/components/cards/HappyStudentsCard";
+import { TotalRevenueCard } from "@/components/cards/TotalRevenueCard";
 
 export const InstructorFeatureVisual = () => {
   return (
     <div className="relative w-[541px] h-[596px] shrink-0 transform scale-[0.52] min-[360px]:scale-[0.56] sm:scale-75 md:scale-90 lg:scale-100 origin-top">
       {/* Layer 1: Total Revenue Card */}
-      <div className="absolute left-0 top-[44px] w-[232px] h-[119px] z-20 bg-[#003BE2]/90 backdrop-blur-[10px] rounded-[16px] p-4 flex flex-col justify-between text-[#F5F5F6]">
-        <div>
-          <p className="font-sans font-medium text-[16px] leading-[19.2px]">Total Revenue</p>
-          <p className="font-sans text-[10px] text-[#F5F5F6]">July 1-28</p>
-        </div>
-        <div className="flex items-center justify-between">
-          <span className="font-heading font-semibold text-[24px] leading-8 text-[#F5F5F6] tracking-[-0.01em]">$120.29</span>
-          <span className="bg-[#CBFC01] text-[#242528] font-sans font-medium text-[10px] px-2 py-0.5 rounded-full">+12$</span>
-        </div>
-        <div className="w-full h-2 bg-white rounded-full overflow-hidden">
-          <div className="w-[112px] h-full bg-[#D4FB20] rounded-full" />
-        </div>
-      </div>
+      <TotalRevenueCard className="absolute left-0 top-[44px] z-20" />
 
       {/* Layer 1: Year to Date Card */}
       <div className="absolute left-0 top-[194px] w-[134px] h-[135px] z-20 bg-[#003BE2]/90 backdrop-blur-[10px] rounded-[16px] p-4 flex flex-col justify-between text-[#F5F5F6]">

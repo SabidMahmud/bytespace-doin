@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { HappyStudentsCard } from "@/components/HappyStudentsCard";
-import { LearningProgressCard } from "@/components/LearningProgressCard";
+import { HappyStudentsCard } from "@/components/cards/HappyStudentsCard";
+import { LearningProgressCard } from "@/components/cards/LearningProgressCard";
 import { Button } from "@/components/Button";
 
 export const HeroSection = () => {

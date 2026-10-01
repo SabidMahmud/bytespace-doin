@@ -1,5 +1,5 @@
 import React from "react";
-import { CourseCard } from "@/components/CourseCard";
+import { CourseCard } from "@/components/cards/CourseCard";
 import { courses } from "@/data/mockCourses";
 
 export const CourseGridSection = () => {
