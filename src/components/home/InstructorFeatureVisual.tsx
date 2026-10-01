@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { HappyStudentsCard } from "@/components/cards/HappyStudentsCard";
 import { TotalRevenueCard } from "@/components/cards/TotalRevenueCard";
+import { YearToDateCard } from "@/components/cards/YearToDateCard";
 
 export const InstructorFeatureVisual = () => {
   return (
@@ -10,16 +11,7 @@ export const InstructorFeatureVisual = () => {
       <TotalRevenueCard className="absolute left-0 top-[44px] z-20" />
 
       {/* Layer 1: Year to Date Card */}
-      <div className="absolute left-0 top-[194px] w-[134px] h-[135px] z-20 bg-persian-blue-800/90 backdrop-blur-[10px] rounded-[16px] p-4 flex flex-col justify-between text-shuttle-gray-50">
-        <div>
-          <p className="font-sans font-medium text-[16px] leading-[19.2px]">Year to Date</p>
-          <p className="font-sans text-[10px] text-shuttle-gray-50">2023</p>
-        </div>
-        <span className="font-heading font-semibold text-[24px] leading-8 text-shuttle-gray-50 tracking-[-0.01em]">$1,200.38</span>
-        <div>
-          <span className="inline-block bg-electric-lime-500 text-shuttle-gray-950 font-sans font-medium text-[10px] px-2 py-0.5 rounded-full">+12$</span>
-        </div>
-      </div>
+      <YearToDateCard className="absolute left-0 top-[194px] z-20" />
 
       {/* Layer 2: 3D Female Instructor with Tablet */}
       <Image
