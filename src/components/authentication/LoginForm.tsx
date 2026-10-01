@@ -32,10 +32,10 @@ export const LoginForm: React.FC = () => {
       <div className="flex flex-col gap-[28px] sm:gap-[40px]">
         {/* Header Texts */}
         <div className="flex flex-col">
-          <span className="font-sans font-normal text-[16px] sm:text-[18px] leading-[28.8px] text-[#003BE2]">
+          <span className="font-sans font-normal text-[16px] sm:text-[18px] leading-[28.8px] text-persian-blue-800">
             Welcome Back
           </span>
-          <h1 className="font-heading font-semibold text-[28px] min-[380px]:text-[34px] sm:text-[44px] leading-[1.15] sm:leading-[1.2] tracking-[-0.44px] text-[#242528] mt-1">
+          <h1 className="font-heading font-semibold text-[28px] min-[380px]:text-[34px] sm:text-[44px] leading-[1.15] sm:leading-[1.2] tracking-[-0.44px] text-shuttle-gray-950 mt-1">
             Sign in to ByteSpace
           </h1>
         </div>
@@ -46,7 +46,7 @@ export const LoginForm: React.FC = () => {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="email"
-              className="font-sans font-medium text-[14px] leading-[16.8px] text-[#242528]"
+              className="font-sans font-medium text-[14px] leading-[16.8px] text-shuttle-gray-950"
             >
               Email
             </label>
@@ -58,7 +58,7 @@ export const LoginForm: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="designer@example.com"
-              className="w-full h-[52px] px-[24px] py-[12px] bg-white border border-[#E5E6E8] rounded-[12px] font-sans font-normal text-[18px] leading-[28.8px] text-[#242528] placeholder-[#82868E] focus:outline-none focus:border-[#003BE2] focus:ring-2 focus:ring-[#003BE2]/20 transition-all"
+              className="w-full h-[52px] px-[24px] py-[12px] bg-white border border-shuttle-gray-100 rounded-[12px] font-sans font-normal text-[18px] leading-[28.8px] text-shuttle-gray-950 placeholder-shuttle-gray-400 focus:outline-none focus:border-persian-blue-800 focus:ring-2 focus:ring-persian-blue-800/20 transition-all"
             />
           </div>
 
@@ -67,13 +67,13 @@ export const LoginForm: React.FC = () => {
             <div className="flex items-center justify-between">
               <label
                 htmlFor="password"
-                className="font-sans font-medium text-[14px] leading-[16.8px] text-[#242528]"
+                className="font-sans font-medium text-[14px] leading-[16.8px] text-shuttle-gray-950"
               >
                 Password
               </label>
               <Link
                 href="#"
-                className="font-sans text-[14px] text-[#003BE2] hover:underline"
+                className="font-sans text-[14px] text-persian-blue-800 hover:underline"
               >
                 Forgot password?
               </Link>
@@ -86,7 +86,7 @@ export const LoginForm: React.FC = () => {
               value={formData.password}
               onChange={handleChange}
               placeholder="••••••••"
-              className="w-full h-[52px] px-[24px] py-[12px] bg-white border border-[#E5E6E8] rounded-[12px] font-sans font-normal text-[18px] leading-[28.8px] text-[#242528] placeholder-[#82868E] focus:outline-none focus:border-[#003BE2] focus:ring-2 focus:ring-[#003BE2]/20 transition-all"
+              className="w-full h-[52px] px-[24px] py-[12px] bg-white border border-shuttle-gray-100 rounded-[12px] font-sans font-normal text-[18px] leading-[28.8px] text-shuttle-gray-950 placeholder-shuttle-gray-400 focus:outline-none focus:border-persian-blue-800 focus:ring-2 focus:ring-persian-blue-800/20 transition-all"
             />
           </div>
 
@@ -107,12 +107,12 @@ export const LoginForm: React.FC = () => {
 
       {/* ── Bottom Section (Don't have an account? Sign up) ── */}
       <div className="flex items-center justify-center gap-1 font-sans text-[16px] leading-[25.6px] mt-6 sm:mt-0">
-        <span className="text-[#4B4C53] font-normal">
+        <span className="text-shuttle-gray-700 font-normal">
           Don&apos;t have an account?
         </span>
         <Link
           href="/register"
-          className="text-[#003BE2] font-normal hover:underline ml-1"
+          className="text-persian-blue-800 font-normal hover:underline ml-1"
         >
           Sign up
         </Link>

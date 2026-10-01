@@ -5,7 +5,7 @@ import { Button } from "@/components/Button";
 export const CtaSection = () => {
   return (
     <>
-      <section className="w-full bg-[#003be2] relative min-h-[488px] flex justify-center items-center overflow-hidden">
+      <section className="w-full bg-persian-blue-800 relative min-h-[488px] flex justify-center items-center overflow-hidden">
         {/* Tiled Grid Background overlay */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <Image
@@ -89,10 +89,10 @@ export const CtaSection = () => {
 
         {/* Content Container (z-10 so it sits behind the floating shapes but above the grid) */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-[964px] w-full px-4 py-16 md:py-0">
-          <h2 className="font-heading font-semibold text-[32px] md:text-[44px] leading-[1.2] text-[#F5F5F6] max-w-[710px] mb-[40px]">
+          <h2 className="font-heading font-semibold text-[32px] md:text-[44px] leading-[1.2] text-shuttle-gray-50 max-w-[710px] mb-[40px]">
             Unlock Your Potential as a Creator with ByteSpace
           </h2>
-          <p className="font-sans text-[16px] md:text-[18px] leading-[1.6] text-[#F5F5F6] mb-[40px] max-w-[964px]">
+          <p className="font-sans text-[16px] md:text-[18px] leading-[1.6] text-shuttle-gray-50 mb-[40px] max-w-[964px]">
             Experience the collaboration of numerous creators and an expanding selection of courses. Register now and become a part of a community comprising over 10,000 local and international creators. Utilize our Course Editor, and showcase your expertise by publishing your finest course on the ByteSpace Course Library.
           </p>
           <Button

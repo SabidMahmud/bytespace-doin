@@ -4,7 +4,7 @@ import Image from "next/image";
 export const PartnersSection = () => {
   return (
     <>
-      <section className="w-full bg-[#F5F5F6] py-[80px] flex items-center justify-center">
+      <section className="w-full bg-shuttle-gray-50 py-[80px] flex items-center justify-center">
                 <div className="w-full max-w-[1440px] px-6 sm:px-12 lg:px-[121px] flex items-center justify-center">
                   <div className="w-full flex flex-wrap items-center justify-center gap-[72px] opacity-100">
                     <Image src="/partner-1.svg" alt="Partner 1" width={167} height={42} className="h-[42px] w-auto object-contain shrink-0" unoptimized />

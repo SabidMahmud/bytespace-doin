@@ -49,13 +49,13 @@ export const Button = React.forwardRef<
     "inline-flex items-center justify-center font-sans font-medium rounded-full transition-all select-none focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer";
 
   const variants: Record<ButtonVariant, string> = {
-    lime: "bg-[#D4FB20] hover:bg-[#CBFC01] text-[#242528] focus:ring-[#D4FB20]",
-    secondary: "bg-[#D4FB20] hover:bg-[#CBFC01] text-[#242528] focus:ring-[#D4FB20]",
-    primary: "bg-[#003BE2] hover:bg-[#0033C6] text-white focus:ring-[#003BE2]",
-    outline: "border-2 border-[#CED0D3] text-[#242528] hover:border-[#3A3B3F] bg-transparent focus:ring-[#003BE2]",
-    ghost: "bg-transparent text-[#003BE2] hover:text-[#0028A3] focus:ring-[#003BE2]",
-    link: "bg-transparent text-[#003BE2] hover:text-[#0028A3] focus:ring-[#003BE2]",
-    muted: "bg-[#F5F5F6] hover:bg-[#EAEBED] text-[#4B4C53] focus:ring-[#D4FB20]",
+    lime: "bg-electric-lime-400 hover:bg-electric-lime-500 text-shuttle-gray-950 focus:ring-electric-lime-400",
+    secondary: "bg-electric-lime-400 hover:bg-electric-lime-500 text-shuttle-gray-950 focus:ring-electric-lime-400",
+    primary: "bg-persian-blue-800 hover:bg-persian-blue-850 text-white focus:ring-persian-blue-800",
+    outline: "border-2 border-shuttle-gray-200 text-shuttle-gray-950 hover:border-shuttle-gray-900 bg-transparent focus:ring-persian-blue-800",
+    ghost: "bg-transparent text-persian-blue-800 hover:text-persian-blue-900 focus:ring-persian-blue-800",
+    link: "bg-transparent text-persian-blue-800 hover:text-persian-blue-900 focus:ring-persian-blue-800",
+    muted: "bg-shuttle-gray-50 hover:bg-shuttle-gray-100 text-shuttle-gray-700 focus:ring-electric-lime-400",
   };
 
   const sizes: Record<ButtonSize, string> = {

@@ -17,7 +17,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
   title,
   name,
   icon,
-  iconBg = "bg-[#D4FB20]",
+  iconBg = "bg-electric-lime-400",
   href,
   onClick,
   className = "",
@@ -28,7 +28,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
   const content = (
     <>
       <div
-        className={`w-[60px] h-[60px] ${iconBg} rounded-full flex items-center justify-center group-hover:scale-105 transition-transform shrink-0`}
+        className={`w-15 h-15 ${iconBg} rounded-full flex items-center justify-center group-hover:scale-105 transition-transform shrink-0`}
       >
         {typeof icon === "string" ? (
           <Image
@@ -43,15 +43,15 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
           icon
         )}
       </div>
-      <span className="font-sans text-[20px] leading-[24px] text-[#242528] font-medium text-center px-2">
+      <span className="font-sans text-[20px] leading-6 text-shuttle-gray-950 font-medium text-center px-2">
         {label}
       </span>
     </>
   );
 
   const baseClasses = `w-[167px] h-[167px] bg-white rounded-[24px] border ${
-    isActive ? "border-[#003BE2] shadow-md" : "border-[#CED0D3]"
-  } flex flex-col items-center justify-center gap-3 transition-all duration-200 hover:border-[#003BE2] hover:shadow-md group cursor-pointer shrink-0 ${className}`;
+    isActive ? "border-persian-blue-800 shadow-md" : "border-shuttle-gray-200"
+  } flex flex-col items-center justify-center gap-3 transition-all duration-200 hover:border-persian-blue-800 hover:shadow-md group cursor-pointer shrink-0 ${className}`;
 
   if (href) {
     return (

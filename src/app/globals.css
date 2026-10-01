@@ -2,12 +2,17 @@
 
 @theme {
   --color-persian-blue-800: #003BE2;
+  --color-persian-blue-850: #0033C6;
+  --color-persian-blue-900: #0028A3;
   --color-electric-lime-200: #F2FF92;
   --color-electric-lime-400: #D4FB20;
   --color-electric-lime-500: #CBFC01;
   --color-electric-violet-50: #F5F2FF;
   --color-electric-violet-600: #7F30F7;
   --color-electric-violet-950: #300B6A;
+
+  --color-navy-950: #040819;
+  --color-surface-soft: #FAFAFA;
   
   --color-shuttle-gray-50: #F5F5F6;
   --color-shuttle-gray-100: #E5E6E8;

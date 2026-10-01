@@ -28,26 +28,26 @@ export const Navbar = () => {
           
           {/* Center Nav - Desktop Only */}
           <nav className="hidden lg:flex items-start gap-6 absolute left-1/2 transform -translate-x-1/2 top-[47px]">
-            <Link href="#" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-medium text-[16px] leading-[19.2px] transition-colors">
+            <Link href="#" className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-medium text-[16px] leading-[19.2px] transition-colors">
               Home
             </Link>
-            <Link href="#" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[16px] leading-[25.6px] transition-colors">
+            <Link href="#" className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-normal text-[16px] leading-[25.6px] transition-colors">
               Courses
             </Link>
-            <Link href="#" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[16px] leading-[25.6px] transition-colors">
+            <Link href="#" className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-normal text-[16px] leading-[25.6px] transition-colors">
               Creators
             </Link>
           </nav>
 
           {/* Right Nav - Desktop Only */}
           <div className="hidden lg:flex items-center gap-6 z-50">
-            <Link href="/login" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[16px] leading-[24px] transition-colors">
+            <Link href="/login" className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-normal text-[16px] leading-[24px] transition-colors">
               Sign In
             </Link>
-            <Link href="/register" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[16px] leading-[24px] transition-colors">
+            <Link href="/register" className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-normal text-[16px] leading-[24px] transition-colors">
               Join Us
             </Link>
-            <button type="button" className="text-[#F5F5F6] hover:text-[#D4FB20] transition-colors flex items-center justify-center w-6 h-6" aria-label="Shopping Bag">
+            <button type="button" className="text-shuttle-gray-50 hover:text-electric-lime-400 transition-colors flex items-center justify-center w-6 h-6" aria-label="Shopping Bag">
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z" />
               </svg>
@@ -58,7 +58,7 @@ export const Navbar = () => {
           <input type="checkbox" id="mobile-menu-toggle" className="hidden peer" />
           <label 
             htmlFor="mobile-menu-toggle" 
-            className="lg:hidden text-[#F5F5F6] p-4 -mr-2 z-[99999] relative cursor-pointer pointer-events-auto touch-manipulation transition-colors select-none"
+            className="lg:hidden text-shuttle-gray-50 p-4 -mr-2 z-[99999] relative cursor-pointer pointer-events-auto touch-manipulation transition-colors select-none"
             aria-label="Toggle Mobile Menu"
           >
             {/* Hamburger Icon */}
@@ -72,23 +72,23 @@ export const Navbar = () => {
           </label>
 
           {/* Full Screen Slide-down Menu Drawer */}
-          <div className="fixed inset-0 bg-[#003BE2] z-[9999] flex flex-col items-center justify-center gap-8 text-center opacity-0 pointer-events-none transition-all duration-300 peer-checked:opacity-100 peer-checked:pointer-events-auto">
-            <Link href="#" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-medium text-[20px] transition-colors">
+          <div className="fixed inset-0 bg-persian-blue-800 z-[9999] flex flex-col items-center justify-center gap-8 text-center opacity-0 pointer-events-none transition-all duration-300 peer-checked:opacity-100 peer-checked:pointer-events-auto">
+            <Link href="#" className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-medium text-[20px] transition-colors">
               Home
             </Link>
-            <Link href="#" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[20px] transition-colors">
+            <Link href="#" className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-normal text-[20px] transition-colors">
               Courses
             </Link>
-            <Link href="#" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[20px] transition-colors">
+            <Link href="#" className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-normal text-[20px] transition-colors">
               Creators
             </Link>
             
             <div className="w-[100px] h-px bg-white/20 my-2"></div>
             
-            <Link href="/login" className="text-[#F5F5F6] hover:text-[#D4FB20] font-sans font-normal text-[20px] transition-colors">
+            <Link href="/login" className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-normal text-[20px] transition-colors">
               Sign In
             </Link>
-            <Link href="/register" className="text-[#D4FB20] hover:text-[#CBFC01] font-sans font-medium text-[20px] transition-colors">
+            <Link href="/register" className="text-electric-lime-400 hover:text-electric-lime-500 font-sans font-medium text-[20px] transition-colors">
               Join Us
             </Link>
           </div>

@@ -31,7 +31,7 @@ export const RegisterVisualGraphics: React.FC<{ className?: string }> = ({
           avatars={cardAvatars}
           count="26+"
           countBadgeVariant="dark"
-          priceColor="text-[#300B6A]"
+          priceColor="text-electric-violet-950"
         />
       </div>
 
@@ -49,7 +49,7 @@ export const RegisterVisualGraphics: React.FC<{ className?: string }> = ({
           avatars={cardAvatars}
           count="26+"
           countBadgeVariant="dark"
-          priceColor="text-[#300B6A]"
+          priceColor="text-electric-violet-950"
         />
       </div>
 

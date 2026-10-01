@@ -30,7 +30,7 @@ const TESTIMONIALS = [
 
 export const TestimonialsSection = () => {
   return (
-    <section className="w-full bg-[#FAFAFA] relative overflow-hidden flex justify-center py-16 md:pt-[74px] md:pb-[57px]">
+    <section className="w-full bg-surface-soft relative overflow-hidden flex justify-center py-16 md:pt-[74px] md:pb-[57px]">
       {/* Background Gradient Blobs (z-0) */}
       <div className="absolute inset-0 flex justify-center pointer-events-none z-0">
         <div className="w-[1440px] min-w-[1440px] h-full relative">
@@ -80,7 +80,7 @@ export const TestimonialsSection = () => {
           <h2 className="font-heading font-semibold text-[32px] lg:text-[44px] leading-[1.2] tracking-[-0.44px] text-black w-full lg:max-w-[577px]">
             Discover What Our Community Is Saying
           </h2>
-          <p className="font-sans text-[16px] lg:text-[18px] text-[#4F4F4F] leading-[1.6] w-full lg:max-w-[580px]">
+          <p className="font-sans text-[16px] lg:text-[18px] text-black-700 leading-[1.6] w-full lg:max-w-[580px]">
             At ByteSpace, our vibrant community of learners and creators is at
             the heart of what we do. Hear directly from those who have
             experienced the transformative journey of learning and creating on

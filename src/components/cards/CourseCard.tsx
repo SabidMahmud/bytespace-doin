@@ -58,7 +58,7 @@ export const CourseCard = ({
             {badges.map((b, idx) => (
               <span 
                 key={idx} 
-                className="bg-[#F5F5F6]/90 backdrop-blur-md text-[#4F4F4F] text-[12px] font-sans font-medium px-3 py-[5px] rounded-full whitespace-nowrap shrink-0"
+                className="bg-shuttle-gray-50/90 backdrop-blur-md text-black-700 text-[12px] font-sans font-medium px-3 py-[5px] rounded-full whitespace-nowrap shrink-0"
               >
                 {b}
               </span>
@@ -78,17 +78,17 @@ export const CourseCard = ({
             >
               {title}
             </h3>
-            <p className="font-sans text-[12px] leading-[1.6] text-[#4F4F4F] font-normal mt-0.5">
+            <p className="font-sans text-[12px] leading-[1.6] text-black-700 font-normal mt-0.5">
               {author}
             </p>
           </div>
 
           {/* Rating */}
           <div className="flex items-center gap-1 shrink-0 pt-0.5">
-            <span className="font-sans text-[18px] text-[#4F4F4F] font-normal">
+            <span className="font-sans text-[18px] text-black-700 font-normal">
               {rating}
             </span>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-[#CECFD3]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-shuttle-gray-200">
               <path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
             </svg>
           </div>
@@ -97,15 +97,15 @@ export const CourseCard = ({
         {/* Level Badge + Avatar Stack */}
         <div className="flex items-center gap-3 mt-4">
           {/* Beginner Badge */}
-          <div className="h-[32px] px-3 bg-[#F5F5F6] rounded-full flex items-center gap-1 shrink-0">
+          <div className="h-[32px] px-3 bg-shuttle-gray-50 rounded-full flex items-center gap-1 shrink-0">
             <svg
-              className="w-5 h-5 text-[#4B4C53]"
+              className="w-5 h-5 text-shuttle-gray-700"
               viewBox="0 0 24 24"
               fill="currentColor"
             >
               <path d="M17 4h3v16h-3V4zM5 14h3v6H5v-6zm6-5h3v11h-3V9z" />
             </svg>
-            <span className="font-sans text-[12px] font-medium text-[#4B4C53]">
+            <span className="font-sans text-[12px] font-medium text-shuttle-gray-700">
               {level}
             </span>
           </div>
@@ -128,7 +128,7 @@ export const CourseCard = ({
               className={`w-8 h-8 rounded-full flex items-center justify-center relative shrink-0 ${
                 countBadgeVariant === "dark"
                   ? "bg-black border-[1.5px] border-white text-white"
-                  : "bg-[#D4FB20] border-0 border-white text-[#242528]"
+                  : "bg-electric-lime-400 border-0 border-white text-shuttle-gray-950"
               }`}
               style={{ zIndex: avatars.length }}
             >
@@ -143,12 +143,12 @@ export const CourseCard = ({
         <div className="flex items-baseline gap-1 mt-[18px]">
           <span
             className={`font-heading font-semibold text-[20px] ${
-              priceColor || "text-[#003BE2]"
+              priceColor || "text-persian-blue-800"
             }`}
           >
             {price}
           </span>
-          <span className="font-sans text-[12px] text-[#4F4F4F] font-normal">
+          <span className="font-sans text-[12px] text-black-700 font-normal">
             {period}
           </span>
         </div>

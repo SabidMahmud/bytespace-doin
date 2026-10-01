@@ -10,7 +10,7 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="relative w-full min-h-screen bg-[#003BE2] overflow-x-hidden flex flex-col items-center">
+    <main className="relative w-full min-h-screen bg-persian-blue-800 overflow-x-hidden flex flex-col items-center">
       {/* ── Exact 2px Stroke Grid Background ── */}
       <div className="absolute inset-0 w-full h-full pointer-events-none overflow-hidden select-none z-0">
         <Image

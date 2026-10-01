@@ -44,11 +44,11 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
         <h4 className="font-heading font-semibold text-[20px] leading-[1.2] tracking-[-0.2px] text-black">
           {name}
         </h4>
-        <p className="font-sans text-[18px] leading-[1.6] text-[#003BE2]">
+        <p className="font-sans text-[18px] leading-[1.6] text-persian-blue-800">
           {role}
         </p>
       </div>
-      <p className="mt-6 font-sans text-[18px] leading-[1.6] text-[#4F4F4F]">
+      <p className="mt-6 font-sans text-[18px] leading-[1.6] text-black-700">
         {formattedQuote}
       </p>
     </div>

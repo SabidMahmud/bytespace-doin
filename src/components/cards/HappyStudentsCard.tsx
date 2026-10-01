@@ -56,13 +56,13 @@ export const HappyStudentsCard: React.FC<HappyStudentsCardProps> = ({
     <div
       className={`w-[258px] p-4 flex flex-col justify-between text-left shrink-0 ${
         isAccent
-          ? "h-[123px] bg-[#D4FB20] rounded-[16px] shadow-xl"
+          ? "h-[123px] bg-electric-lime-400 rounded-[16px] shadow-xl"
           : "h-[121px] bg-white rounded-[16px] shadow-xl border border-white/80"
       } ${className}`}
     >
       <div className={isAccent ? "flex flex-col gap-1" : "flex flex-col"}>
         <p
-          className={`font-sans font-medium text-[16px] text-[#242528] ${
+          className={`font-sans font-medium text-[16px] text-shuttle-gray-950 ${
             isAccent ? "leading-[24px]" : "leading-[19.2px] mb-1"
           }`}
         >
@@ -74,13 +74,13 @@ export const HappyStudentsCard: React.FC<HappyStudentsCardProps> = ({
           <span
             className={`font-sans ${
               isAccent
-                ? "font-normal text-[10px] leading-[15px] text-[#424348]"
-                : "font-normal text-[12px] leading-[19.2px] text-[#82868E]"
+                ? "font-normal text-[10px] leading-[15px] text-shuttle-gray-800"
+                : "font-normal text-[12px] leading-[19.2px] text-shuttle-gray-400"
             }`}
           >
             {rating} ({reviewCount})
           </span>
-          <RatingStar fill={isAccent ? "#003BE2" : "#D4FB20"} />
+          <RatingStar fill={isAccent ? "var(--color-persian-blue-800)" : "var(--color-electric-lime-400)"} />
         </div>
       </div>
 
@@ -89,7 +89,7 @@ export const HappyStudentsCard: React.FC<HappyStudentsCardProps> = ({
           <div
             key={`${src}-${i}`}
             className={`relative overflow-hidden rounded-full shrink-0 ${
-              isAccent ? "border-0 border-[#D4FB20]" : "border-0 border-white"
+              isAccent ? "border-0 border-electric-lime-400" : "border-0 border-white"
             }`}
             style={{
               width: avatarSize,
@@ -110,8 +110,8 @@ export const HappyStudentsCard: React.FC<HappyStudentsCardProps> = ({
         <div
           className={`rounded-full flex items-center justify-center relative shrink-0 font-sans font-bold text-[12px] leading-[18px] ${
             isAccent
-              ? "bg-black border-0 border-[#D4FB20] text-[#F5F5F6]"
-              : "bg-[#D4FB20] text-[#242528] border-0 border-white"
+              ? "bg-black border-0 border-electric-lime-400 text-shuttle-gray-50"
+              : "bg-electric-lime-400 text-shuttle-gray-950 border-0 border-white"
           }`}
           style={{
             width: avatarSize,
