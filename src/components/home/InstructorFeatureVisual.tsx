@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { HappyStudentsCard } from "@/components/HappyStudentsCard";
 
 export const InstructorFeatureVisual = () => {
   return (
@@ -54,31 +55,10 @@ export const InstructorFeatureVisual = () => {
       />
 
       {/* Layer 4: Happy Students Card */}
-      <div className="absolute left-[283px] top-[413px] w-[258px] h-[123px] z-40 bg-white/90 backdrop-blur-[10px] rounded-[16px] p-4 flex flex-col justify-between border border-white/80">
-        <div>
-          <p className="font-sans font-medium text-[16px] leading-[19.2px] text-[#242528] mb-1">Happy Students</p>
-          <div className="flex items-center gap-1.5 mb-2">
-            <span className="font-sans text-[10px] text-[#242528] font-bold">4.5 (240)</span>
-            <span className="text-[#D4FB20] text-sm">★</span>
-          </div>
-        </div>
-        <div className="flex items-center -space-x-4">
-          {[
-            "/images/course/avatar1.png",
-            "/images/course/avatar2.png",
-            "/images/course/avatar3.png",
-            "/images/course/avatar4.png",
-            "/images/course/avatar1.png",
-            "/images/course/avatar2.png",
-            "/images/course/avatar3.png",
-          ].map((avatarUrl, i) => (
-            <Image key={i} src={avatarUrl} alt="" width={43} height={43} className="w-[43px] h-[43px] rounded-full border-0 border-white object-cover" unoptimized />
-          ))}
-          <div className="w-[43px] h-[43px] rounded-full bg-[#D4FB20] border-0 border-white flex items-center justify-center text-[12px] font-bold text-[#242528] z-10 shrink-0">
-            2K+
-          </div>
-        </div>
-      </div>
+      <HappyStudentsCard
+        variant="light"
+        className="absolute left-[283px] top-[413px] z-40"
+      />
     </div>
   );
 };

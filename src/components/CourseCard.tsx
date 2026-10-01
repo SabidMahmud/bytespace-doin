@@ -10,7 +10,19 @@ export interface CourseCardProps {
   period?: string;
   rating?: string;
   badges?: string[];
+  avatars?: string[];
+  count?: string;
+  countBadgeVariant?: "lime" | "dark";
+  priceColor?: string;
+  className?: string;
 }
+
+const DEFAULT_COURSE_AVATARS = [
+  "/images/course/avatar1.png",
+  "/images/course/avatar2.png",
+  "/images/course/avatar3.png",
+  "/images/course/avatar4.png",
+];
 
 export const CourseCard = ({
   title = "From Idea to Startup Success",
@@ -21,9 +33,14 @@ export const CourseCard = ({
   period = "/lifetime",
   rating = "4.5",
   badges = ["17 Lessons", "2 hours 16 mins", "59 Comments"],
+  avatars = DEFAULT_COURSE_AVATARS,
+  count = "26+",
+  countBadgeVariant = "lime",
+  priceColor,
+  className = "",
 }: CourseCardProps) => {
   return (
-    <div className="w-[373px] h-[384px] bg-white rounded-[24px] p-4 flex flex-col justify-between transition-all duration-200 hover:shadow-xl hover:-translate-y-1 group cursor-pointer shrink-0">
+    <div className={`w-[373px] h-[384px] border-[1px] border-shuttle-gray-200 bg-white rounded-[24px] p-4 flex flex-col justify-between transition-all duration-200 hover:shadow-xl hover:-translate-y-1 group cursor-pointer shrink-0 ${className}`}>
       
       {/* Thumbnail Frame (341px x 195px) */}
       <div className="relative w-[341px] h-[195px] rounded-[12px] overflow-hidden shrink-0">
@@ -95,19 +112,40 @@ export const CourseCard = ({
 
           {/* Avatar Stack */}
           <div className="flex items-center -space-x-2 shrink-0">
-            <Image src="/images/course/avatar1.png" alt="" width={32} height={32} className="w-8 h-8 rounded-full border-[1.5px] border-white object-cover relative z-0" unoptimized />
-            <Image src="/images/course/avatar2.png" alt="" width={32} height={32} className="w-8 h-8 rounded-full border-[1.5px] border-white object-cover relative z-10" unoptimized />
-            <Image src="/images/course/avatar3.png" alt="" width={32} height={32} className="w-8 h-8 rounded-full border-[1.5px] border-white object-cover relative z-20" unoptimized />
-            <Image src="/images/course/avatar4.png" alt="" width={32} height={32} className="w-8 h-8 rounded-full border-[1.5px] border-white object-cover relative z-30" unoptimized />
-            <div className="w-8 h-8 rounded-full bg-[#D4FB20] border-[1.5px] border-white flex items-center justify-center relative z-40 shrink-0">
-              <span className="font-sans text-[12px] font-medium text-[#242528]">26+</span>
+            {avatars.map((av, i) => (
+              <Image
+                key={i}
+                src={av}
+                alt=""
+                width={32}
+                height={32}
+                className="w-8 h-8 rounded-full border-[1.5px] border-white object-cover relative"
+                style={{ zIndex: i }}
+                unoptimized
+              />
+            ))}
+            <div
+              className={`w-8 h-8 rounded-full flex items-center justify-center relative shrink-0 ${
+                countBadgeVariant === "dark"
+                  ? "bg-black border-[1.5px] border-white text-white"
+                  : "bg-[#D4FB20] border-0 border-white text-[#242528]"
+              }`}
+              style={{ zIndex: avatars.length }}
+            >
+              <span className="font-sans text-[12px] font-medium">
+                {count}
+              </span>
             </div>
           </div>
         </div>
 
         {/* Price & Period */}
         <div className="flex items-baseline gap-1 mt-[18px]">
-          <span className="font-heading font-semibold text-[20px] text-[#003BE2]">
+          <span
+            className={`font-heading font-semibold text-[20px] ${
+              priceColor || "text-[#003BE2]"
+            }`}
+          >
             {price}
           </span>
           <span className="font-sans text-[12px] text-[#4F4F4F] font-normal">

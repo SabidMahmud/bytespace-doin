@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { StudentFeatureVisual } from "@/components/StudentFeatureVisual";
-import { InstructorFeatureVisual } from "@/components/InstructorFeatureVisual";
+import { StudentFeatureVisual } from "@/components/home/StudentFeatureVisual";
+import { InstructorFeatureVisual } from "@/components/home/InstructorFeatureVisual";
 
 export const FeaturesShowcaseSection = () => {
   return (

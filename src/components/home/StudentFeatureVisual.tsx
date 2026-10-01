@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { CourseCard } from "@/components/CourseCard";
+import { LearningProgressCard } from "@/components/LearningProgressCard";
 
 export const StudentFeatureVisual = () => {
   return (
@@ -42,13 +43,7 @@ export const StudentFeatureVisual = () => {
       />
 
       {/* Layer 4: Learning Progress Card */}
-      <div className="absolute left-[345px] top-[218px] w-[232px] h-[138px] z-40 bg-white rounded-2xl shadow-xl p-4 flex flex-col justify-between border border-white/80">
-        <p className="font-sans font-medium text-[16px] leading-6 text-[#242528]">Learning Progress</p>
-        <p className="font-heading font-semibold text-[48px] leading-[57.6px] tracking-tight text-[#242528]">55%</p>
-        <div className="w-[200px] h-2 bg-[#F5F5F6] rounded-full overflow-hidden">
-          <div className="w-[112px] h-full bg-[#D4FB20] rounded-full" />
-        </div>
-      </div>
+      <LearningProgressCard className="absolute left-[345px] top-[218px] z-40" />
     </div>
   );
 };
