@@ -1,7 +1,7 @@
 import { NavLink, FooterSection, FooterLink } from "@/types";
 
 export const MAIN_NAV_LINKS: NavLink[] = [
-  { id: "nav-home", label: "Home", href: "#" },
+  { id: "nav-home", label: "Home", href: "/" },
   { id: "nav-courses", label: "Courses", href: "#" },
   { id: "nav-creators", label: "Creators", href: "#" },
 ];

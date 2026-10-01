@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ByteSpace
+
+ByteSpace is a modern online learning platform built with Next.js and Tailwind CSS. It provides a robust landing page experience alongside a fully designed authentication flow. The architecture prioritizes reusability, strict TypeScript type safety, and clean domain-driven data structures.
+
+## Core Technologies
+
+- **Framework**: Next.js (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS (v4) with custom theme configuration
+- **Fonts**: Custom localized fonts (Clash Display, Satoshi, Poppins)
+
+## Features
+
+- **Responsive Landing Page**: Carefully crafted UI sections including a Hero, Course Grid, Learning Paths, Features Showcase, Testimonials, and Call-to-Action.
+- **Authentication Flows**: Polished Login and Registration forms built with composable input fields and split-screen layouts.
+- **Component Architecture**: Atomic design principles with a centralized component library for specialized visual elements (e.g., CourseCard, TotalRevenueCard, YearToDateCard, TestimonialCard).
+- **Domain-Driven Data**: Single Source of Truth implementation for mock data and strongly typed interfaces to ensure type consistency and stable rendering keys across the application.
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project follows a scalable Next.js App Router architecture.
 
-## Learn More
+```text
+.
+├── public                      # Static assets (images, icons, vectors)
+│   ├── courses                 # Course thumbnail assets
+│   ├── icons                   # Category icons
+│   ├── images                  # Sub-grouped image assets (cutouts, auth, testimonials)
+│   └── logo-dark.svg           # Brand logo
+├── src
+│   ├── app                     # Next.js App Router
+│   │   ├── (auth)              # Authentication route group
+│   │   │   ├── login           # /login route
+│   │   │   ├── register        # /register route
+│   │   │   └── layout.tsx      # Auth-specific layout wrapping
+│   │   ├── fonts               # Local font binaries and declarations
+│   │   ├── globals.css         # Global Tailwind directives and CSS variables
+│   │   ├── icon.svg            # Generated site favicon
+│   │   ├── layout.tsx          # Root HTML layout
+│   │   └── page.tsx            # Main landing page route
+│   ├── components
+│   │   ├── authentication      # Specialized UI for auth flows (Forms, Headers)
+│   │   ├── cards               # Reusable specialized card components
+│   │   ├── home                # Composable landing page sections
+│   │   ├── ui                  # Primitive UI elements (InputField)
+│   │   ├── Button.tsx          # Core polymorphic button component
+│   │   ├── Footer.tsx          # Global site footer
+│   │   └── Navbar.tsx          # Global navigation bar
+│   ├── data                    # Centralized mock data arrays
+│   │   ├── categories.ts
+│   │   ├── courses.ts
+│   │   ├── navigation.ts
+│   │   ├── partners.ts
+│   │   └── testimonials.ts
+│   └── types                   # Domain TypeScript interfaces
+│       ├── category.ts
+│       ├── course.ts
+│       ├── navigation.ts
+│       ├── partner.ts
+│       └── testimonial.ts
+├── eslint.config.mjs           # ESLint configuration
+├── next.config.ts              # Next.js configuration
+├── package.json                # Project dependencies and scripts
+└── tsconfig.json               # TypeScript configuration
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Code Conventions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Component Design**: Components are decoupled from their data where possible. Complex pages are broken down into logical semantic sections.
+- **Styling**: Tailwind CSS v4 is used globally. Canonical shorthand utilities are enforced (e.g., using `w-6` instead of `w-[24px]`) to maintain consistency. Custom branding colors and font variables are configured via `@theme` in `globals.css`.
+- **Typing**: Strict TypeScript definitions in the `src/types/` directory act as the source of truth for all component props involving domain entities.

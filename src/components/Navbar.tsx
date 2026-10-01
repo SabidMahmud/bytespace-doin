@@ -4,13 +4,22 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MAIN_NAV_LINKS, AUTH_NAV_LINKS } from "@/data";
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
+  const pathname = usePathname();
+
+  const isActive = (link: { href: string; label: string }) => {
+    // If we're on the root path, consider "Home" or "/" as active
+    if (pathname === "/" && (link.label === "Home" || link.href === "/")) return true;
+    return pathname === link.href;
+  };
+
   return (
-    <header className="w-full bg-transparent absolute top-0 left-0 z-[100] flex justify-center pointer-events-auto">
-      <div className="w-full max-w-[1440px] px-6 xl:px-[120px]">
+    <header className="w-full bg-transparent absolute top-0 left-0 z-100 flex justify-center pointer-events-auto">
+      <div className="w-full max-w-360 px-6 xl:px-30">
         {/* Increased mobile height to ensure it clears the notch/status bar */}
-        <div className="flex justify-between items-center h-20 lg:h-[120px] relative">
+        <div className="flex justify-between items-center h-20 lg:h-30 relative">
           {/* Logo */}
           <div className="flex items-center z-50">
             <Link href="/" className="flex items-center">
@@ -19,7 +28,7 @@ export const Navbar = () => {
                 alt="ByteSpace Logo"
                 width={171}
                 height={37}
-                className="h-7 w-auto lg:h-[37px] object-contain"
+                className="h-7 w-auto lg:h-9.25 object-contain"
                 priority
                 unoptimized
               />
@@ -27,16 +36,23 @@ export const Navbar = () => {
           </div>
 
           {/* Center Nav - Desktop Only */}
-          <nav className="hidden lg:flex items-start gap-6 absolute left-1/2 transform -translate-x-1/2 top-[47px]">
-            {MAIN_NAV_LINKS.map((link) => (
-              <Link
-                key={link.id}
-                href={link.href}
-                className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-medium text-base leading-[19.2px] transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
+          <nav className="hidden lg:flex items-start gap-6 absolute left-1/2 transform -translate-x-1/2 top-11.75">
+            {MAIN_NAV_LINKS.map((link) => {
+              const active = isActive(link);
+              return (
+                <Link
+                  key={link.id}
+                  href={link.href}
+                  className={`font-sans font-medium text-base leading-[19.2px] transition-all duration-300 ${
+                    active
+                      ? "text-shuttle-gray-50 -translate-y-1 font-medium"
+                      : "text-shuttle-gray-50 font-normal hover:text-electric-lime-400 hover:-translate-y-1"
+                  } block`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
 
           {/* Right Nav - Desktop Only */}
@@ -45,7 +61,7 @@ export const Navbar = () => {
               <Link
                 key={link.id}
                 href={link.href}
-                className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-normal text-base leading-[24px] transition-colors"
+                className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-normal text-base leading-6 transition-colors"
               >
                 {link.label}
               </Link>
@@ -65,7 +81,7 @@ export const Navbar = () => {
           <input type="checkbox" id="mobile-menu-toggle" className="hidden peer" />
           <label
             htmlFor="mobile-menu-toggle"
-            className="lg:hidden text-shuttle-gray-50 p-4 -mr-2 z-[99999] relative cursor-pointer pointer-events-auto touch-manipulation transition-colors select-none"
+            className="lg:hidden text-shuttle-gray-50 p-4 -mr-2 z-99999 relative cursor-pointer pointer-events-auto touch-manipulation transition-colors select-none"
             aria-label="Toggle Mobile Menu"
           >
             {/* Hamburger Icon */}
@@ -99,7 +115,7 @@ export const Navbar = () => {
           </label>
 
           {/* Full Screen Slide-down Menu Drawer */}
-          <div className="fixed inset-0 bg-persian-blue-800 z-[9999] flex flex-col items-center justify-center gap-8 text-center opacity-0 pointer-events-none transition-all duration-300 peer-checked:opacity-100 peer-checked:pointer-events-auto">
+          <div className="fixed inset-0 bg-persian-blue-800 z-9999 flex flex-col items-center justify-center gap-8 text-center opacity-0 pointer-events-none transition-all duration-300 peer-checked:opacity-100 peer-checked:pointer-events-auto">
             {MAIN_NAV_LINKS.map((link) => (
               <Link
                 key={link.id}
@@ -110,7 +126,7 @@ export const Navbar = () => {
               </Link>
             ))}
 
-            <div className="w-[100px] h-px bg-white/20 my-2"></div>
+            <div className="w-25 h-px bg-white/20 my-2"></div>
 
             {AUTH_NAV_LINKS.map((link) => (
               <Link
