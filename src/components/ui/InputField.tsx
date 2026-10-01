@@ -13,7 +13,7 @@ export const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
         <div className="flex items-center justify-between">
           <label
             htmlFor={id}
-            className="font-sans font-medium text-[14px] leading-[16.8px] text-shuttle-gray-950"
+            className="font-sans font-medium text-sm leading-[16.8px] text-shuttle-gray-950"
           >
             {label}
           </label>
@@ -22,7 +22,7 @@ export const InputField = React.forwardRef<HTMLInputElement, InputFieldProps>(
         <input
           id={id}
           ref={ref}
-          className={`w-full h-13 px-6 py-3 bg-white border border-shuttle-gray-100 rounded-xl font-sans font-normal text-[18px] leading-[28.8px] text-shuttle-gray-950 placeholder-shuttle-gray-400 focus:outline-none focus:border-persian-blue-800 focus:ring-2 focus:ring-persian-blue-800/20 transition-all ${className}`}
+          className={`w-full h-13 px-6 py-3 bg-white border border-shuttle-gray-100 rounded-xl font-sans font-normal text-lg leading-[28.8px] text-shuttle-gray-950 placeholder-shuttle-gray-400 focus:outline-none focus:border-persian-blue-800 focus:ring-2 focus:ring-persian-blue-800/20 transition-all ${className}`}
           {...props}
         />
       </div>

@@ -23,12 +23,12 @@ export const Footer = () => {
               />
             </div>
 
-            <p className="font-sans text-[14px] leading-[1.6] text-shuttle-gray-950 mb-6 sm:mb-8 max-w-md">
+            <p className="font-sans text-sm leading-[1.6] text-shuttle-gray-950 mb-6 sm:mb-8 max-w-md">
               Stay Up to date with our latest features and releases by joining
               our newsletter.
             </p>
 
-            <div className="flex flex-col gap-3 sm:gap-[14px]">
+            <div className="flex flex-col gap-3 sm:gap-3.5">
               <form 
                 onSubmit={(e) => e.preventDefault()}
                 className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6 w-full"
@@ -37,18 +37,18 @@ export const Footer = () => {
                   type="email"
                   required
                   placeholder="Enter your email"
-                  className="w-full sm:w-[376px] h-[48px] sm:h-[52px] px-5 sm:px-6 border border-shuttle-gray-200 rounded-full font-sans text-[15px] sm:text-[16px] text-shuttle-gray-950 outline-none placeholder-shuttle-gray-400 focus:border-persian-blue-800 transition-colors"
+                  className="w-full sm:w-[376px] h-12 sm:h-[52px] px-5 sm:px-6 border border-shuttle-gray-200 rounded-full font-sans text-[15px] sm:text-base text-shuttle-gray-950 outline-none placeholder-shuttle-gray-400 focus:border-persian-blue-800 transition-colors"
                 />
                 <Button
                   type="submit"
                   variant="lime"
                   size="md"
-                  className="w-full sm:w-[130px] text-[16px] sm:text-[18px] shrink-0"
+                  className="w-full sm:w-[130px] text-base sm:text-lg shrink-0"
                 >
                   Subscribe
                 </Button>
               </form>
-              <p className="font-sans text-[11px] sm:text-[12px] leading-[1.6] text-shuttle-gray-700 max-w-md">
+              <p className="font-sans text-[11px] sm:text-xs leading-[1.6] text-shuttle-gray-700 max-w-md">
                 By subscribing, you agree to our Privacy Policy and consent to
                 receive updates from our company.
               </p>
@@ -62,14 +62,14 @@ export const Footer = () => {
                 key={section.id}
                 className={`flex flex-col min-w-[130px] ${
                   idx === 1
-                    ? "pt-0 sm:pt-[44px] lg:pt-[48px]"
+                    ? "pt-0 sm:pt-11 lg:pt-12"
                     : idx === 2
                     ? "col-span-2 sm:col-span-1"
                     : ""
                 }`}
               >
                 {section.title && (
-                  <h4 className="font-sans font-medium text-[16px] leading-[1.5] text-shuttle-gray-950 mb-4 sm:mb-6">
+                  <h4 className="font-sans font-medium text-base leading-[1.5] text-shuttle-gray-950 mb-4 sm:mb-6">
                     {section.title}
                   </h4>
                 )}
@@ -78,7 +78,7 @@ export const Footer = () => {
                     <Link
                       key={link.id}
                       href={link.href}
-                      className="font-sans text-[14px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
+                      className="font-sans text-sm text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -90,9 +90,9 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Line & Copyright */}
-        <div className="w-full h-[1px] bg-shuttle-gray-200 mt-10 sm:mt-16 lg:mt-[130px] mb-6 sm:mb-[23px]"></div>
+        <div className="w-full h-px bg-shuttle-gray-200 mt-10 sm:mt-16 lg:mt-[130px] mb-6 sm:mb-[23px]"></div>
         <div className="flex flex-col-reverse sm:flex-row justify-between items-center gap-4 sm:gap-0 w-full text-center sm:text-left">
-          <p className="font-sans text-[12px] text-shuttle-gray-400">
+          <p className="font-sans text-xs text-shuttle-gray-400">
             &copy; 2023 ByteSpace. All rights reserved.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-end gap-5 sm:gap-6">
@@ -100,7 +100,7 @@ export const Footer = () => {
               <Link
                 key={link.id}
                 href={link.href}
-                className="font-sans text-[12px] text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
+                className="font-sans text-xs text-shuttle-gray-700 hover:text-persian-blue-800 transition-colors"
               >
                 {link.label}
               </Link>

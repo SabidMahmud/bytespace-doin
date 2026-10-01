@@ -59,12 +59,12 @@ export const Button = React.forwardRef<
   };
 
   const sizes: Record<ButtonSize, string> = {
-    sm: "h-[38px] px-4 text-[14px]",
-    md: "h-[48px] px-6 text-[16px] leading-[19.2px]",
-    lg: "h-[52px] px-6 text-[18px] leading-[21.6px]",
-    auth: "w-[123px] h-[46px] text-[18px] leading-[21.6px]",
-    pill: "h-[43px] px-4 text-[16px] leading-[19.2px] rounded-[24px]",
-    auto: "px-6 py-3 text-[18px]",
+    sm: "h-[38px] px-4 text-sm",
+    md: "h-12 px-6 text-base leading-[19.2px]",
+    lg: "h-[52px] px-6 text-lg leading-[21.6px]",
+    auth: "w-[123px] h-[46px] text-lg leading-[21.6px]",
+    pill: "h-[43px] px-4 text-base leading-[19.2px] rounded-3xl",
+    auto: "px-6 py-3 text-lg",
   };
 
   const classes = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;

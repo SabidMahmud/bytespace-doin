@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export const RegisterHeader: React.FC = () => {
   return (
-    <header className="flex items-center h-[80px] lg:h-[120px] shrink-0 z-50">
+    <header className="flex items-center h-20 lg:h-[120px] shrink-0 z-50">
       <Link
         href="/"
-        className="inline-flex items-center overflow-hidden h-[30px] lg:h-[37px] w-[24px] lg:w-[29px]"
+        className="inline-flex items-center overflow-hidden h-[30px] lg:h-[37px] w-6 lg:w-[29px]"
       >
         <Image
           src="/logo.svg"

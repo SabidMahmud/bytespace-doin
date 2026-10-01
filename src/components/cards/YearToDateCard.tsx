@@ -15,13 +15,13 @@ export const YearToDateCard = ({
 }: YearToDateCardProps) => {
   return (
     <div
-      className={`w-[134px] h-[135px] bg-persian-blue-800/90 backdrop-blur-[10px] rounded-[16px] p-4 flex flex-col justify-between text-shuttle-gray-50 ${className}`}
+      className={`w-[134px] h-[135px] bg-persian-blue-800/90 backdrop-blur-[10px] rounded-2xl p-4 flex flex-col justify-between text-shuttle-gray-50 ${className}`}
     >
       <div>
-        <p className="font-sans font-medium text-[16px] leading-[19.2px]">Year to Date</p>
+        <p className="font-sans font-medium text-base leading-[19.2px]">Year to Date</p>
         <p className="font-sans text-[10px] text-shuttle-gray-50">{year}</p>
       </div>
-      <span className="font-heading font-semibold text-[24px] leading-8 text-shuttle-gray-50 tracking-[-0.01em]">
+      <span className="font-heading font-semibold text-2xl leading-8 text-shuttle-gray-50 tracking-[-0.01em]">
         {amount}
       </span>
       <div>

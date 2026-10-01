@@ -9,10 +9,10 @@ export const AuthSidebarContent: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-4 text-center xl:text-left max-w-[475px] mx-auto xl:mx-0">
-      <span className="font-heading font-semibold text-[24px] xl:text-[20px] leading-[1.2] text-shuttle-gray-50 tracking-[-0.2px]">
+      <span className="font-heading font-semibold text-2xl xl:text-xl leading-[1.2] text-shuttle-gray-50 tracking-[-0.2px]">
         {isLogin ? "Sign in to ByteSpace" : "Sign up and come in"}
       </span>
-      <p className="font-sans font-normal text-[16px] xl:text-[18px] leading-[1.6] text-shuttle-gray-50">
+      <p className="font-sans font-normal text-base xl:text-lg leading-[1.6] text-shuttle-gray-50">
         {isLogin
           ? "Welcome back! Enter your credentials to access your courses, track your learning progress, and continue growing."
           : "The registration process is straightforward, uncomplicated, and efficient, allowing users to sign up quickly, easily, and at no cost"}

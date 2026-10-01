@@ -8,10 +8,10 @@ export const LearningPathsSection = () => {
       <div className="w-full max-w-[1440px] px-6 sm:px-12 lg:px-[119px] flex flex-col items-center">
         {/* Header (Frame 9 [34:684] -> w: 917px, h: 117px, gap: 16px) */}
         <div className="w-full max-w-[917px] text-center mb-[68px]">
-          <h2 className="font-heading font-semibold text-3xl sm:text-4xl lg:text-[36px] lg:leading-[43.2px] text-navy-950 tracking-[-0.36px] mb-4">
+          <h2 className="font-heading font-semibold text-3xl sm:text-4xl lg:text-4xl lg:leading-[43.2px] text-navy-950 tracking-[-0.36px] mb-4">
             Explore Diverse Learning Paths at Bytespace
           </h2>
-          <p className="font-sans text-[16px] sm:text-[18px] sm:leading-[28.8px] text-shuttle-gray-400 font-normal max-w-[917px] mx-auto">
+          <p className="font-sans text-base sm:text-lg sm:leading-[28.8px] text-shuttle-gray-400 font-normal max-w-[917px] mx-auto">
             At Bytespace, we believe in empowering individuals through knowledge.
             Our diverse range of courses spans various fields, ensuring
             there&apos;s something for everyone. Unleash your potential and
@@ -20,7 +20,7 @@ export const LearningPathsSection = () => {
         </div>
 
         {/* 6 Category Cards Grid (Frame 10 [34:725] -> w: 1202px, h: 167px, gap: 40px) */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-[40px] justify-items-center w-full max-w-[1202px]">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-10 justify-items-center w-full max-w-[1202px]">
           {LEARNING_PATH_CATEGORIES.map((cat) => (
             <CategoryCard
               key={cat.id}

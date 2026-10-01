@@ -43,13 +43,13 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({
           icon
         )}
       </div>
-      <span className="font-sans text-[20px] leading-6 text-shuttle-gray-950 font-medium text-center px-2">
+      <span className="font-sans text-xl leading-6 text-shuttle-gray-950 font-medium text-center px-2">
         {label}
       </span>
     </>
   );
 
-  const baseClasses = `w-[167px] h-[167px] bg-white rounded-[24px] border ${
+  const baseClasses = `w-[167px] h-[167px] bg-white rounded-3xl border ${
     isActive ? "border-persian-blue-800 shadow-md" : "border-shuttle-gray-200"
   } flex flex-col items-center justify-center gap-3 transition-all duration-200 hover:border-persian-blue-800 hover:shadow-md group cursor-pointer shrink-0 ${className}`;
 

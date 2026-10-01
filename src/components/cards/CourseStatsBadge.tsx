@@ -20,7 +20,7 @@ export const CourseStatsBadge: React.FC<CourseStatsBadgeProps> = ({
       <div
         className={`bg-white rounded-xl sm:rounded-2xl shadow-lg px-2.5 py-1.5 sm:px-3.5 sm:py-2.5 text-left border border-white/80 ${className}`}
       >
-        <p className="font-sans font-medium text-shuttle-gray-950 text-[11px] sm:text-[14px] leading-tight mb-0.5">
+        <p className="font-sans font-medium text-shuttle-gray-950 text-[11px] sm:text-sm leading-tight mb-0.5">
           {title}
         </p>
         <p className="text-[9px] sm:text-[11px] font-sans font-normal text-shuttle-gray-400 leading-tight">
@@ -32,12 +32,12 @@ export const CourseStatsBadge: React.FC<CourseStatsBadgeProps> = ({
 
   return (
     <div
-      className={`w-[208px] h-[70px] bg-white rounded-2xl shadow-xl px-4 py-3 text-left border border-white/80 ${className}`}
+      className={`w-52 h-[70px] bg-white rounded-2xl shadow-xl px-4 py-3 text-left border border-white/80 ${className}`}
     >
-      <p className="font-sans font-medium text-shuttle-gray-950 text-[16px] leading-[19.2px] mb-0.5">
+      <p className="font-sans font-medium text-shuttle-gray-950 text-base leading-[19.2px] mb-0.5">
         {title}
       </p>
-      <p className="text-[12px] font-sans font-normal text-shuttle-gray-400 leading-[19.2px]">
+      <p className="text-xs font-sans font-normal text-shuttle-gray-400 leading-[19.2px]">
         {coursesCount} Courses &bull; {studentsCount} Students
       </p>
     </div>

@@ -10,7 +10,7 @@ export const Navbar = () => {
     <header className="w-full bg-transparent absolute top-0 left-0 z-[100] flex justify-center pointer-events-auto">
       <div className="w-full max-w-[1440px] px-6 xl:px-[120px]">
         {/* Increased mobile height to ensure it clears the notch/status bar */}
-        <div className="flex justify-between items-center h-[80px] lg:h-[120px] relative">
+        <div className="flex justify-between items-center h-20 lg:h-[120px] relative">
           {/* Logo */}
           <div className="flex items-center z-50">
             <Link href="/" className="flex items-center">
@@ -19,7 +19,7 @@ export const Navbar = () => {
                 alt="ByteSpace Logo"
                 width={171}
                 height={37}
-                className="h-[28px] w-auto lg:h-[37px] object-contain"
+                className="h-7 w-auto lg:h-[37px] object-contain"
                 priority
                 unoptimized
               />
@@ -32,7 +32,7 @@ export const Navbar = () => {
               <Link
                 key={link.id}
                 href={link.href}
-                className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-medium text-[16px] leading-[19.2px] transition-colors"
+                className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-medium text-base leading-[19.2px] transition-colors"
               >
                 {link.label}
               </Link>
@@ -45,7 +45,7 @@ export const Navbar = () => {
               <Link
                 key={link.id}
                 href={link.href}
-                className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-normal text-[16px] leading-[24px] transition-colors"
+                className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-normal text-base leading-[24px] transition-colors"
               >
                 {link.label}
               </Link>
@@ -104,7 +104,7 @@ export const Navbar = () => {
               <Link
                 key={link.id}
                 href={link.href}
-                className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-medium text-[20px] transition-colors"
+                className="text-shuttle-gray-50 hover:text-electric-lime-400 font-sans font-medium text-xl transition-colors"
               >
                 {link.label}
               </Link>
@@ -116,7 +116,7 @@ export const Navbar = () => {
               <Link
                 key={link.id}
                 href={link.href}
-                className={`font-sans text-[20px] transition-colors ${
+                className={`font-sans text-xl transition-colors ${
                   link.isPrimary
                     ? "text-electric-lime-400 hover:text-electric-lime-500 font-medium"
                     : "text-shuttle-gray-50 hover:text-electric-lime-400 font-normal"

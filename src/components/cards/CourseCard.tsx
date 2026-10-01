@@ -29,10 +29,10 @@ export const CourseCard = ({
   className = "",
 }: CourseCardProps) => {
   return (
-    <div className={`w-[373px] h-[384px] border border-shuttle-gray-200 bg-white rounded-[24px] p-4 flex flex-col justify-between transition-all duration-200 hover:shadow-xl hover:-translate-y-1 group cursor-pointer shrink-0 ${className}`}>
+    <div className={`w-[373px] h-96 border border-shuttle-gray-200 bg-white rounded-3xl p-4 flex flex-col justify-between transition-all duration-200 hover:shadow-xl hover:-translate-y-1 group cursor-pointer shrink-0 ${className}`}>
       
       {/* Thumbnail Frame (341px x 195px) */}
-      <div className="relative w-[341px] h-[195px] rounded-[12px] overflow-hidden shrink-0">
+      <div className="relative w-[341px] h-[195px] rounded-xl overflow-hidden shrink-0">
         <Image
           src={image}
           alt={title}
@@ -47,7 +47,7 @@ export const CourseCard = ({
             {badges.map((b, idx) => (
               <span 
                 key={idx} 
-                className="bg-shuttle-gray-50/90 backdrop-blur-md text-black-700 text-[12px] font-sans font-medium px-3 py-1.25 rounded-full whitespace-nowrap shrink-0"
+                className="bg-shuttle-gray-50/90 backdrop-blur-md text-black-700 text-xs font-sans font-medium px-3 py-1.25 rounded-full whitespace-nowrap shrink-0"
               >
                 {b}
               </span>
@@ -62,19 +62,19 @@ export const CourseCard = ({
         <div className="flex items-start justify-between gap-2">
           <div className="flex flex-col flex-1 min-w-0 pr-2">
             <h3 
-              className="font-heading font-semibold text-[20px] leading-[1.2] text-black tracking-[-0.2px] truncate"
+              className="font-heading font-semibold text-xl leading-[1.2] text-black tracking-[-0.2px] truncate"
               title={title}
             >
               {title}
             </h3>
-            <p className="font-sans text-[12px] leading-[1.6] text-black-700 font-normal mt-0.5">
+            <p className="font-sans text-xs leading-[1.6] text-black-700 font-normal mt-0.5">
               {author}
             </p>
           </div>
 
           {/* Rating */}
           <div className="flex items-center gap-1 shrink-0 pt-0.5">
-            <span className="font-sans text-[18px] text-black-700 font-normal">
+            <span className="font-sans text-lg text-black-700 font-normal">
               {rating}
             </span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-shuttle-gray-200">
@@ -94,7 +94,7 @@ export const CourseCard = ({
             >
               <path d="M17 4h3v16h-3V4zM5 14h3v6H5v-6zm6-5h3v11h-3V9z" />
             </svg>
-            <span className="font-sans text-[12px] font-medium text-shuttle-gray-700">
+            <span className="font-sans text-xs font-medium text-shuttle-gray-700">
               {level}
             </span>
           </div>
@@ -121,7 +121,7 @@ export const CourseCard = ({
               }`}
               style={{ zIndex: avatars.length }}
             >
-              <span className="font-sans text-[12px] font-medium">
+              <span className="font-sans text-xs font-medium">
                 {count}
               </span>
             </div>
@@ -131,13 +131,13 @@ export const CourseCard = ({
         {/* Price & Period */}
         <div className="flex items-baseline gap-1 mt-4.5">
           <span
-            className={`font-heading font-semibold text-[20px] ${
+            className={`font-heading font-semibold text-xl ${
               priceColor || "text-persian-blue-800"
             }`}
           >
             {price}
           </span>
-          <span className="font-sans text-[12px] text-black-700 font-normal">
+          <span className="font-sans text-xs text-black-700 font-normal">
             {period}
           </span>
         </div>

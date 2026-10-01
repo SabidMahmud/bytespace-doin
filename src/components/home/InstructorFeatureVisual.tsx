@@ -8,7 +8,7 @@ export const InstructorFeatureVisual = () => {
   return (
     <div className="relative w-[541px] h-[596px] shrink-0 transform scale-[0.52] min-[360px]:scale-[0.56] sm:scale-75 md:scale-90 lg:scale-100 origin-top">
       {/* Layer 1: Total Revenue Card */}
-      <TotalRevenueCard className="absolute left-0 top-[44px] z-20" />
+      <TotalRevenueCard className="absolute left-0 top-11 z-20" />
 
       {/* Layer 1: Year to Date Card */}
       <YearToDateCard className="absolute left-0 top-[194px] z-20" />
@@ -19,7 +19,7 @@ export const InstructorFeatureVisual = () => {
         alt="Instructor with tablet"
         width={543.75}
         height={745}
-        className="absolute left-[20px] top-[15px] z-30 pointer-events-none max-w-none"
+        className="absolute left-5 top-[15px] z-30 pointer-events-none max-w-none"
         priority
         unoptimized
       />

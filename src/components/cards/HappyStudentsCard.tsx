@@ -56,13 +56,13 @@ export const HappyStudentsCard: React.FC<HappyStudentsCardProps> = ({
     <div
       className={`w-[258px] p-4 flex flex-col justify-between text-left shrink-0 ${
         isAccent
-          ? "h-[123px] bg-electric-lime-400 rounded-[16px] shadow-xl"
-          : "h-[121px] bg-white rounded-[16px] shadow-xl border border-white/80"
+          ? "h-[123px] bg-electric-lime-400 rounded-2xl shadow-xl"
+          : "h-[121px] bg-white rounded-2xl shadow-xl border border-white/80"
       } ${className}`}
     >
       <div className={isAccent ? "flex flex-col gap-1" : "flex flex-col"}>
         <p
-          className={`font-sans font-medium text-[16px] text-shuttle-gray-950 ${
+          className={`font-sans font-medium text-base text-shuttle-gray-950 ${
             isAccent ? "leading-[24px]" : "leading-[19.2px] mb-1"
           }`}
         >
@@ -75,7 +75,7 @@ export const HappyStudentsCard: React.FC<HappyStudentsCardProps> = ({
             className={`font-sans ${
               isAccent
                 ? "font-normal text-[10px] leading-[15px] text-shuttle-gray-800"
-                : "font-normal text-[12px] leading-[19.2px] text-shuttle-gray-400"
+                : "font-normal text-xs leading-[19.2px] text-shuttle-gray-400"
             }`}
           >
             {rating} ({reviewCount})
@@ -108,7 +108,7 @@ export const HappyStudentsCard: React.FC<HappyStudentsCardProps> = ({
           </div>
         ))}
         <div
-          className={`rounded-full flex items-center justify-center relative shrink-0 font-sans font-bold text-[12px] leading-[18px] ${
+          className={`rounded-full flex items-center justify-center relative shrink-0 font-sans font-bold text-xs leading-[18px] ${
             isAccent
               ? "bg-black border-0 border-electric-lime-400 text-shuttle-gray-50"
               : "bg-electric-lime-400 text-shuttle-gray-950 border-0 border-white"

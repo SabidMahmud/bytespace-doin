@@ -89,16 +89,16 @@ export const CtaSection = () => {
 
         {/* Content Container (z-10 so it sits behind the floating shapes but above the grid) */}
         <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-[964px] w-full px-4 py-16 md:py-0">
-          <h2 className="font-heading font-semibold text-[32px] md:text-[44px] leading-[1.2] text-shuttle-gray-50 max-w-[710px] mb-[40px]">
+          <h2 className="font-heading font-semibold text-[32px] md:text-[44px] leading-[1.2] text-shuttle-gray-50 max-w-[710px] mb-10">
             Unlock Your Potential as a Creator with ByteSpace
           </h2>
-          <p className="font-sans text-[16px] md:text-[18px] leading-[1.6] text-shuttle-gray-50 mb-[40px] max-w-[964px]">
+          <p className="font-sans text-base md:text-lg leading-[1.6] text-shuttle-gray-50 mb-10 max-w-[964px]">
             Experience the collaboration of numerous creators and an expanding selection of courses. Register now and become a part of a community comprising over 10,000 local and international creators. Utilize our Course Editor, and showcase your expertise by publishing your finest course on the ByteSpace Course Library.
           </p>
           <Button
             href="/register"
             variant="lime"
-            className="rounded-[24px] px-6 py-3 text-[18px] hover:opacity-90"
+            className="rounded-3xl px-6 py-3 text-lg hover:opacity-90"
           >
             Join as Creator
           </Button>

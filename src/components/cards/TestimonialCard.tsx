@@ -28,7 +28,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
   return (
     <div
-      className={`bg-white rounded-[24px] p-6 flex flex-col items-start w-full lg:w-[374px] shrink-0 ${className}`}
+      className={`bg-white rounded-3xl p-6 flex flex-col items-start w-full lg:w-[374px] shrink-0 ${className}`}
     >
       {avatarSrc && (
         <Image
@@ -41,14 +41,14 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = ({
         />
       )}
       <div className="mt-6 flex flex-col">
-        <h4 className="font-heading font-semibold text-[20px] leading-[1.2] tracking-[-0.2px] text-black">
+        <h4 className="font-heading font-semibold text-xl leading-[1.2] tracking-[-0.2px] text-black">
           {name}
         </h4>
-        <p className="font-sans text-[18px] leading-[1.6] text-persian-blue-800">
+        <p className="font-sans text-lg leading-[1.6] text-persian-blue-800">
           {role}
         </p>
       </div>
-      <p className="mt-6 font-sans text-[18px] leading-[1.6] text-black-700">
+      <p className="mt-6 font-sans text-lg leading-[1.6] text-black-700">
         {formattedQuote}
       </p>
     </div>

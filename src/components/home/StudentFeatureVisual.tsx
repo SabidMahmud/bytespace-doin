@@ -37,7 +37,7 @@ export const StudentFeatureVisual = () => {
         alt="Student with laptop"
         width={620}
         height={640}
-        className="absolute left-[64px] top-[48px] z-30 pointer-events-none max-w-none"
+        className="absolute left-16 top-12 z-30 pointer-events-none max-w-none"
         priority
         unoptimized
       />

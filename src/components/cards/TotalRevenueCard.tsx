@@ -22,16 +22,16 @@ export const TotalRevenueCard: React.FC<TotalRevenueCardProps> = ({
 
   return (
     <div
-      className={`w-[232px] h-[119px] bg-persian-blue-800/90 backdrop-blur-[10px] rounded-[16px] p-4 flex flex-col justify-between text-shuttle-gray-50 select-none shrink-0 ${className}`}
+      className={`w-[232px] h-[119px] bg-persian-blue-800/90 backdrop-blur-[10px] rounded-2xl p-4 flex flex-col justify-between text-shuttle-gray-50 select-none shrink-0 ${className}`}
     >
       <div>
-        <p className="font-sans font-medium text-[16px] leading-[19.2px]">
+        <p className="font-sans font-medium text-base leading-[19.2px]">
           {title}
         </p>
         <p className="font-sans text-[10px] text-shuttle-gray-50">{dateRange}</p>
       </div>
       <div className="flex items-center justify-between">
-        <span className="font-heading font-semibold text-[24px] leading-8 text-shuttle-gray-50 tracking-[-0.01em]">
+        <span className="font-heading font-semibold text-2xl leading-8 text-shuttle-gray-50 tracking-[-0.01em]">
           {amount}
         </span>
         {badge && (

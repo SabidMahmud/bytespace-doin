@@ -29,7 +29,7 @@ export const HeroSection = () => {
 
         {/* 1. Top-Left Lime Coil */}
         <div
-          className="absolute -left-[56px] top-[283px] w-[256px] h-[272px] z-30 pointer-events-none hidden xl:block"
+          className="absolute -left-14 top-[283px] w-64 h-[272px] z-30 pointer-events-none hidden xl:block"
           aria-hidden="true"
         >
           <Image
@@ -44,7 +44,7 @@ export const HeroSection = () => {
 
         {/* 4. Top-Right Lime Cylinder */}
         <div
-          className="absolute right-[-3px] top-[256px] w-[164px] h-[298px] z-30 pointer-events-none hidden xl:block"
+          className="absolute right-[-3px] top-64 w-[164px] h-[298px] z-30 pointer-events-none hidden xl:block"
           aria-hidden="true"
         >
           <Image
@@ -131,14 +131,14 @@ export const HeroSection = () => {
 
           {/* Headline [1:1770] -> x: 252, y: 169, w: 935, h: 172 (Heading L: Poppins SemiBold 72px / 86.4px, -0.72px) */}
           <div className="absolute left-[252px] top-[169px] w-[935px] text-center z-10 pointer-events-none">
-            <h1 className="font-heading font-semibold text-[72px] leading-[86.4px] text-white tracking-[-0.72px]">
+            <h1 className="font-heading font-semibold text-7xl leading-[86.4px] text-white tracking-[-0.72px]">
               Get Access to Hundreds<br />Courses Available
             </h1>
           </div>
 
           {/* Subtitle [1:1771] -> x: 310, y: 373, w: 819, h: 29 (Body L: Satoshi Regular 18px / 28.8px) */}
           <div className="absolute left-[310px] top-[373px] w-[819px] text-center z-10 pointer-events-none">
-            <p className="font-sans text-[18px] leading-[28.8px] text-shuttle-gray-100 font-normal whitespace-nowrap">
+            <p className="font-sans text-lg leading-[28.8px] text-shuttle-gray-100 font-normal whitespace-nowrap">
               Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses.
             </p>
           </div>
@@ -177,7 +177,7 @@ export const HeroSection = () => {
         <div className="xl:hidden relative w-full flex flex-col items-center pt-24 pb-16 px-4 md:px-8 z-10 flex-1">
           {/* Headline */}
           <div className="w-full max-w-3xl text-center mb-6">
-            <h1 className="font-heading font-semibold text-[38px] sm:text-[48px] md:text-[56px] leading-[1.2] text-white tracking-[-0.72px]">
+            <h1 className="font-heading font-semibold text-[38px] sm:text-5xl md:text-[56px] leading-[1.2] text-white tracking-[-0.72px]">
               Get Access to Hundreds<br />Courses Available
             </h1>
           </div>

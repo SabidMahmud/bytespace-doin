@@ -51,14 +51,14 @@ export const HeroSearchBar: React.FC<HeroSearchBarProps> = ({
           onChange={(e) => setQuery(e.target.value)}
           placeholder={placeholder}
           aria-label={placeholder}
-          className="w-full bg-transparent outline-none text-shuttle-gray-950 font-sans placeholder-shuttle-gray-400 text-[16px] md:text-[18px] leading-[28.8px] font-normal"
+          className="w-full bg-transparent outline-none text-shuttle-gray-950 font-sans placeholder-shuttle-gray-400 text-base md:text-lg leading-[28.8px] font-normal"
         />
       </div>
       <Button
         type="submit"
         variant="lime"
         size="lg"
-        className="w-full sm:w-[104px] text-[16px] md:text-[18px] shadow-lg shrink-0"
+        className="w-full sm:w-[104px] text-base md:text-lg shadow-lg shrink-0"
       >
         Search
       </Button>

@@ -26,38 +26,38 @@ export const FeaturesShowcaseSection = () => {
             {/* Left Text (Text [34:768] -> w: 574px, h: 404px) */}
             <div className="w-full lg:w-[574px] shrink-0 text-left">
               {/* Title [34:771] -> Poppins 600, 44px / 52.8px, -0.44px letter spacing, text-shuttle-gray-950 */}
-              <h2 className="font-heading font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[44px] lg:leading-[52.8px] text-shuttle-gray-950 tracking-[-0.44px] mb-4 sm:mb-6 lg:mb-[40px] max-w-[577px]">
+              <h2 className="font-heading font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[44px] lg:leading-[52.8px] text-shuttle-gray-950 tracking-[-0.44px] mb-4 sm:mb-6 lg:mb-10 max-w-[577px]">
                 Your Path to Professional<br className="hidden sm:inline" /> Growth Starts Here!
               </h2>
 
               {/* Subtitle [34:772] -> Satoshi 400, 18px / 28.8px, text-shuttle-gray-700, max-w: 477px */}
-              <p className="font-sans text-[15px] sm:text-[18px] leading-[24px] sm:leading-[28.8px] text-shuttle-gray-700 font-normal mb-6 sm:mb-8 lg:mb-[40px] max-w-[477px]">
+              <p className="font-sans text-[15px] sm:text-lg leading-[24px] sm:leading-[28.8px] text-shuttle-gray-700 font-normal mb-6 sm:mb-8 lg:mb-10 max-w-[477px]">
                 Explore our curated selection of courses tailored to enhance your capabilities and accelerate your career journey. Whether you are looking to sharpen specific skills, gain industry expertise, or embark on a new career path entirely, we have the resources you need.
               </p>
 
               {/* Stats Row (Auto Layout Horizontal [34:773] -> gap: 56px) */}
-              <div className="flex items-center justify-between sm:justify-start gap-4 sm:gap-10 lg:gap-[56px] max-w-sm sm:max-w-none">
+              <div className="flex items-center justify-between sm:justify-start gap-4 sm:gap-10 lg:gap-14 max-w-sm sm:max-w-none">
                 <div>
-                  <p className="font-heading font-medium text-[28px] sm:text-[36px] leading-[36px] sm:leading-[44px] tracking-[-0.36px] text-persian-blue-800">
+                  <p className="font-heading font-medium text-[28px] sm:text-4xl leading-[36px] sm:leading-[44px] tracking-[-0.36px] text-persian-blue-800">
                     12K
                   </p>
-                  <p className="font-sans text-[14px] sm:text-[18px] leading-[22px] sm:leading-[28.8px] text-shuttle-gray-700 font-normal">
+                  <p className="font-sans text-sm sm:text-lg leading-[22px] sm:leading-[28.8px] text-shuttle-gray-700 font-normal">
                     Students
                   </p>
                 </div>
                 <div>
-                  <p className="font-heading font-medium text-[28px] sm:text-[36px] leading-[36px] sm:leading-[44px] tracking-[-0.36px] text-persian-blue-800">
+                  <p className="font-heading font-medium text-[28px] sm:text-4xl leading-[36px] sm:leading-[44px] tracking-[-0.36px] text-persian-blue-800">
                     70+
                   </p>
-                  <p className="font-sans text-[14px] sm:text-[18px] leading-[22px] sm:leading-[28.8px] text-shuttle-gray-700 font-normal">
+                  <p className="font-sans text-sm sm:text-lg leading-[22px] sm:leading-[28.8px] text-shuttle-gray-700 font-normal">
                     Courses
                   </p>
                 </div>
                 <div>
-                  <p className="font-heading font-medium text-[28px] sm:text-[36px] leading-[36px] sm:leading-[44px] tracking-[-0.36px] text-persian-blue-800">
+                  <p className="font-heading font-medium text-[28px] sm:text-4xl leading-[36px] sm:leading-[44px] tracking-[-0.36px] text-persian-blue-800">
                     16
                   </p>
-                  <p className="font-sans text-[14px] sm:text-[18px] leading-[22px] sm:leading-[28.8px] text-shuttle-gray-700 font-normal">
+                  <p className="font-sans text-sm sm:text-lg leading-[22px] sm:leading-[28.8px] text-shuttle-gray-700 font-normal">
                     Creators
                   </p>
                 </div>
@@ -80,12 +80,12 @@ export const FeaturesShowcaseSection = () => {
             {/* Right Text (Text [34:897] -> w: 580px, h: 388px) */}
             <div className="w-full lg:w-[580px] shrink-0 text-left">
               {/* Title [34:900] -> Poppins 600, 44px / 52.8px, -0.44px letter spacing, text-shuttle-gray-950 */}
-              <h2 className="font-heading font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[44px] lg:leading-[52.8px] text-shuttle-gray-950 tracking-[-0.44px] mb-4 sm:mb-6 lg:mb-[40px] max-w-[391px]">
+              <h2 className="font-heading font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[44px] lg:leading-[52.8px] text-shuttle-gray-950 tracking-[-0.44px] mb-4 sm:mb-6 lg:mb-10 max-w-[391px]">
                 Create &amp; Manage<br className="hidden sm:inline" /> Courses Easily.
               </h2>
 
               {/* Subtitle [34:901] -> Satoshi 400, 18px / 28px, text-shuttle-gray-700, max-w: 574px */}
-              <p className="font-sans text-[15px] sm:text-[18px] leading-[24px] sm:leading-[28.8px] text-shuttle-gray-700 font-normal mb-6 sm:mb-8 lg:mb-[40px] max-w-[574px]">
+              <p className="font-sans text-[15px] sm:text-lg leading-[24px] sm:leading-[28.8px] text-shuttle-gray-700 font-normal mb-6 sm:mb-8 lg:mb-10 max-w-[574px]">
                 ByteSpace supports individuals or entities in the creation, publication, and administration of educational courses.
               </p>
 
@@ -101,7 +101,7 @@ export const FeaturesShowcaseSection = () => {
                     <svg className="w-5 h-5 sm:w-6 sm:h-6 text-persian-blue-800 shrink-0" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                     </svg>
-                    <span className="font-sans font-medium text-[16px] sm:text-[18px] leading-[21.6px] text-shuttle-gray-950">
+                    <span className="font-sans font-medium text-base sm:text-lg leading-[21.6px] text-shuttle-gray-950">
                       {item}
                     </span>
                   </div>

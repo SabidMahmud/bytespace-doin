@@ -28,12 +28,12 @@ export const LoginForm: React.FC = () => {
   };
 
   return (
-    <div className="w-full max-w-[579px] h-full min-h-[620px] sm:min-h-[700px] xl:w-[579px] xl:h-[784px] bg-white rounded-[24px] pt-[36px] px-[20px] pb-[28px] sm:pt-[61px] sm:px-[63px] sm:pb-[51px] flex flex-col justify-between shadow-2xl shrink-0">
+    <div className="w-full max-w-[579px] h-full min-h-[620px] sm:min-h-[700px] xl:w-[579px] xl:h-[784px] bg-white rounded-3xl pt-9 px-5 pb-7 sm:pt-[61px] sm:px-[63px] sm:pb-[51px] flex flex-col justify-between shadow-2xl shrink-0">
       {/* ── Top Section (Header + Form) ── */}
-      <div className="flex flex-col gap-[28px] sm:gap-[40px]">
+      <div className="flex flex-col gap-7 sm:gap-10">
         {/* Header Texts */}
         <div className="flex flex-col">
-          <span className="font-sans font-normal text-[16px] sm:text-[18px] leading-[28.8px] text-persian-blue-800">
+          <span className="font-sans font-normal text-base sm:text-lg leading-[28.8px] text-persian-blue-800">
             Welcome Back
           </span>
           <h1 className="font-heading font-semibold text-[28px] min-[380px]:text-[34px] sm:text-[44px] leading-[1.15] sm:leading-[1.2] tracking-[-0.44px] text-shuttle-gray-950 mt-1">
@@ -42,7 +42,7 @@ export const LoginForm: React.FC = () => {
         </div>
 
         {/* Form Fields */}
-        <form onSubmit={handleSubmit} className="flex flex-col gap-[24px]">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-6">
           <InputField
             id="email"
             name="email"
@@ -66,7 +66,7 @@ export const LoginForm: React.FC = () => {
             labelRight={
               <Link
                 href="#"
-                className="font-sans text-[14px] text-persian-blue-800 hover:underline"
+                className="font-sans text-sm text-persian-blue-800 hover:underline"
               >
                 Forgot password?
               </Link>
@@ -89,7 +89,7 @@ export const LoginForm: React.FC = () => {
       </div>
 
       {/* ── Bottom Section (Don't have an account? Sign up) ── */}
-      <div className="flex items-center justify-center gap-1 font-sans text-[16px] leading-[25.6px] mt-6 sm:mt-0">
+      <div className="flex items-center justify-center gap-1 font-sans text-base leading-[25.6px] mt-6 sm:mt-0">
         <span className="text-shuttle-gray-700 font-normal">
           Don&apos;t have an account?
         </span>

@@ -25,10 +25,10 @@ export const LearningProgressCard: React.FC<LearningProgressCardProps> = ({
     <div
       className={`w-58 h-32.75 bg-white rounded-2xl shadow-xl p-4 flex flex-col justify-between text-left border border-white/80 shrink-0 ${className}`}
     >
-      <p className="font-sans font-medium text-[14px] leading-[16.8px] text-shuttle-gray-950">
+      <p className="font-sans font-medium text-sm leading-[16.8px] text-shuttle-gray-950">
         {title}
       </p>
-      <p className="font-heading font-semibold text-[48px] leading-[57.6px] tracking-[-0.48px] text-shuttle-gray-950">
+      <p className="font-heading font-semibold text-5xl leading-[57.6px] tracking-[-0.48px] text-shuttle-gray-950">
         {displayPercent}
       </p>
       <div className="w-full max-w-50 h-2 bg-shuttle-gray-50 rounded-full overflow-hidden">
