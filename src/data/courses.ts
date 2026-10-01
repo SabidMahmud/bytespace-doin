@@ -1,0 +1,66 @@
+import { Course } from "@/types";
+
+export const COURSES: Course[] = [
+  {
+    id: "course-figma-basic",
+    title: "Learn Figma from Basic",
+    author: "by purepearl studio",
+    level: "Beginner",
+    image: "/courses/course-3.png",
+    price: "$25",
+    period: "/lifetime",
+    rating: "4.5",
+  },
+  {
+    id: "course-build-digital-asset",
+    title: "Build Digital Asset",
+    author: "by purepearl studio",
+    level: "Beginner",
+    image: "/courses/course-1.png",
+    price: "$25",
+    period: "/lifetime",
+    rating: "4.5",
+  },
+  {
+    id: "course-power-big-data",
+    title: "the Power of Big Data",
+    author: "by purepearl studio",
+    level: "Beginner",
+    image: "/courses/course-2.png",
+    price: "$25",
+    period: "/lifetime",
+    rating: "4.5",
+  },
+  {
+    id: "course-balancing-productivity",
+    title: "Balancing Productivity and Self-Care",
+    author: "by purepearl studio",
+    level: "Beginner",
+    image: "/courses/course-4.png",
+    price: "$25",
+    period: "/lifetime",
+    rating: "4.5",
+  },
+  {
+    id: "course-mastering-money",
+    title: "Mastering Money Management",
+    author: "by purepearl studio",
+    level: "Beginner",
+    image: "/courses/course-5.png",
+    price: "$25",
+    period: "/lifetime",
+    rating: "4.5",
+  },
+  {
+    id: "course-idea-to-startup",
+    title: "From Idea to Startup Success",
+    author: "by purepearl studio",
+    level: "Beginner",
+    image: "/courses/course-6.png",
+    price: "$25",
+    period: "/lifetime",
+    rating: "4.5",
+  },
+];
+
+export const courses = COURSES;
