@@ -4,7 +4,7 @@ ByteSpace is a modern online learning platform built with Next.js and Tailwind C
 
 ## Live Demo
 
-- **Production Deployment**: [https://bytespace-new.vercel.app](https://bytespace-new.vercel.app)
+- **Production Deployment**: [https://bytespace-new-kohl-pi.vercel.app](https://bytespace-new-kohl-pi.vercel.app)
 
 ## Core Technologies
 
